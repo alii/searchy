@@ -33,6 +33,7 @@ const BANG_MAP = {
 	anilist: "https://anilist.co/search/anime?search={q}",
 	myanimelist: "https://myanimelist.net/search/all?q={q}",
 	lh: "https://localhost:3000",
+	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, "/")}.html`,
 };
 
 function handleRequest(request) {
