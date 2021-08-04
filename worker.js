@@ -11,7 +11,7 @@ const BANG_MAP = {
 	github: "https://github.com/{q}",
 	namelix: "https://namelix.com/app/?keywords={q}",
 	namecheap: "http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={q}&utm_source=opensearch",
-	pintrest: "http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation",
+	pinterest: "http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation",
 	stackoverflow: "https://stackoverflow.com/search?q={q}",
 	youtube: "https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch",
 	gyazo: "https://gyazo.com/search/{q}",
