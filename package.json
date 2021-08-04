@@ -1,0 +1,8 @@
+{
+	"name": "search",
+	"version": "1.0.0",
+	"main": "worker.js",
+	"repository": "https://github.com/alii/search",
+	"author": "Alistair Smith <alistairsmith01@gmail.com>",
+	"license": "MIT"
+}
