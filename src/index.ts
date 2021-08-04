@@ -30,6 +30,7 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 	lh: 'http://localhost:3000',
 	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
+	subso: 'https://sub.so/{q}',
 };
 
 function handleRequest(request: Request) {
