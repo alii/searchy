@@ -27,6 +27,7 @@ const BANG_MAP = {
 	twitch: "https://www.twitch.tv/{q}",
 	maps: "https://www.google.com/maps/search/{q}",
 	reddit: "https://www.reddit.com/search/?q={q}",
+	geizhals: "https://geizhals.de/?fs={q}",
 };
 
 function handleRequest(request) {
