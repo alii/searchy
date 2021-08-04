@@ -10,12 +10,10 @@ const BANG_MAP = {
 	npm: 'https://npmjs.org/package/{q}',
 	github: 'https://github.com/{q}',
 	namelix: 'https://namelix.com/app/?keywords={q}',
-	namecheap:
-		'http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={q}&utm_source=opensearch',
+	namecheap: 'http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={q}&utm_source=opensearch',
 	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
 	stackoverflow: 'https://stackoverflow.com/search?q={q}',
-	youtube:
-		'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
+	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	gyazo: 'https://gyazo.com/search/{q}',
 	codepen: 'https://codepen.io/search/pens?q={q}',
 	genius: 'https://genius.com/search?q={q}',

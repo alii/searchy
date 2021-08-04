@@ -4,5 +4,9 @@
 	"main": "worker.js",
 	"repository": "https://github.com/alii/search",
 	"author": "Alistair Smith <alistairsmith01@gmail.com>",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@cloudflare/workers-types": "^2.2.2",
+		"typescript": "^4.3.5"
+	}
 }
