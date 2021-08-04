@@ -18,7 +18,7 @@ const BANG_MAP = {
 	codepen: "https://codepen.io/search/pens?q=%s"
 };
 
-async function handleRequest(request) {
+function handleRequest(request) {
 	const url = new URL(request.url);
 	const query = url.searchParams.get("q") ?? "";
 
