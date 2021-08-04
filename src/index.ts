@@ -32,8 +32,8 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
 	subso: 'https://sub.so/{q}',
 	giggl: 'https://canary.giggl.app/portal/{q}',
-	imp: 'https://impb.in/p/${q}',
-	imperial: "https://imperialb.in/p/${p}",
+	imp: 'https://impb.in/p/{q}',
+	imperial: 'https://imperialb.in/p/{p}',
 };
 
 function handleRequest(request: Request) {
