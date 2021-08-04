@@ -21,7 +21,8 @@ const BANG_MAP = {
 	pypi: "https://pypi.org/project/{q}/",
 	musicstax: "https://musicstax.com/search?q={q}",
 	discordpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}",
-	dpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}"
+	dpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}",
+	ig: "https://instagram.com/{q}",
 };
 
 function handleRequest(request) {
