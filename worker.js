@@ -24,6 +24,9 @@ const BANG_MAP = {
 	dpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}",
 	ig: "https://instagram.com/{q}",
 	gitlab: "https://gitlab.com/search?search={q}",
+	twitch: "https://www.twitch.tv/{q}",
+	maps: "https://www.google.com/maps/search/{q}",
+	reddit: "https://www.reddit.com/search/?q={q}",
 };
 
 function handleRequest(request) {
