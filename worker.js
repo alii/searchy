@@ -11,7 +11,7 @@ const BANG_MAP = {
 	github: "https://github.com/{q}",
 };
 
-async function handleRequest(request) {
+function handleRequest(request) {
 	const url = new URL(request.url);
 	const query = url.searchParams.get("q") ?? "";
 
