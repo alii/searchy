@@ -16,7 +16,8 @@ const BANG_MAP = {
 	youtube: "https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch",
 	gyazo: "https://gyazo.com/search/{q}",
 	codepen: "https://codepen.io/search/pens?q={q}",
-	genius: "https://genius.com/search?q={q}"
+	genius: "https://genius.com/search?q={q}",
+	spotify: "https://open.spotify.com/search/{q}",
 };
 
 function handleRequest(request) {
