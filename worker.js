@@ -9,13 +9,13 @@ const BANG_MAP = {
 	duck: "https://duckduckgo.com/?q={q}",
 	npm: "https://npmjs.org/package/{q}",
 	github: "https://github.com/{q}",
-	namelix: "https://namelix.com/app/?keywords=%s",
-	namecheap: "http://www.namecheap.com/domains/domain-name-search/results.aspx?domain=%s&utm_source=opensearch",
-	pintrest: "http://www.pinterest.com/search/pins/?q=%s&rs=direct_navigation",
-	stackoverflow: "https://stackoverflow.com/search?q=%s",
-	youtube: "https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch",
+	namelix: "https://namelix.com/app/?keywords={q}",
+	namecheap: "http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={q}&utm_source=opensearch",
+	pintrest: "http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation",
+	stackoverflow: "https://stackoverflow.com/search?q={q}",
+	youtube: "https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch",
 	gyazo: "https://gyazo.com/search/%s",
-	codepen: "https://codepen.io/search/pens?q=%s"
+	codepen: "https://codepen.io/search/pens?q={q}"
 };
 
 function handleRequest(request) {
