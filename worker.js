@@ -25,6 +25,7 @@ const BANG_MAP = {
 	ig: "https://instagram.com/{q}",
 	gitlab: "https://gitlab.com/search?search={q}",
 	amazon: "https://www.amazon.com/s?k={q}",
+	crates: "https://crates.io/search?q={q}",
 };
 
 function handleRequest(request) {
