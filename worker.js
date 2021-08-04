@@ -23,6 +23,7 @@ const BANG_MAP = {
 	discordpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}",
 	dpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}",
 	ig: "https://instagram.com/{q}",
+	gitlab: "https://gitlab.com/search?search={q}",
 };
 
 function handleRequest(request) {
