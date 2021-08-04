@@ -6,4 +6,6 @@ zone_id = ''
 usage_model = ''
 compatibility_flags = []
 workers_dev = true
- 
+
+[build]
+command = "yarn && yarn build"

@@ -1,12 +1,18 @@
 {
 	"name": "search",
 	"version": "1.0.0",
-	"main": "worker.js",
+	"main": "dist/index.js",
 	"repository": "https://github.com/alii/search",
 	"author": "Alistair Smith <alistairsmith01@gmail.com>",
 	"license": "MIT",
+	"scripts": {
+		"build": "tsup src/index.ts"
+	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^2.2.2",
 		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"tsup": "^4.13.1"
 	}
 }

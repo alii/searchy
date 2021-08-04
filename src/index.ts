@@ -1,8 +1,4 @@
-addEventListener('fetch', event => {
-	event.respondWith(handleRequest(event.request));
-});
-
-const BANG_MAP = {
+const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> = {
 	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
 	urban: 'https://www.urbandictionary.com/define.php?term={q}',
 	git: 'https://github.com/search?q={q}',
@@ -32,10 +28,11 @@ const BANG_MAP = {
 	crates: 'https://crates.io/search?q={q}',
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
-	lh: 'https://localhost:3000',
+	lh: 'http://localhost:3000',
+	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
 };
 
-function handleRequest(request) {
+function handleRequest(request: Request) {
 	const url = new URL(request.url);
 	const query = url.searchParams.get('q') ?? '';
 
@@ -54,3 +51,5 @@ function handleRequest(request) {
 
 	return Response.redirect('https://google.com/search?q=' + query, 301);
 }
+
+addEventListener('fetch', event => event.respondWith(handleRequest(event.request)));
