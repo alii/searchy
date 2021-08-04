@@ -34,6 +34,7 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	imp: 'https://impb.in/p/{q}',
 	imperial: 'https://imperialb.in/p/{p}',
+	help: 'https://github.com/alii/search/blob/master/src/index.ts',
 };
 
 function handleRequest(request: Request) {
