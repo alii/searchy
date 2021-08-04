@@ -30,6 +30,8 @@ const BANG_MAP = {
 	geizhals: "https://geizhals.de/?fs={q}",
 	amazon: "https://www.amazon.com/s?k={q}",
 	crates: "https://crates.io/search?q={q}",
+	anilist: "https://anilist.co/search/anime?search={q}",
+	myanimelist: "https://myanimelist.net/search/all?q={q}",
 };
 
 function handleRequest(request) {
