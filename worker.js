@@ -28,6 +28,8 @@ const BANG_MAP = {
 	maps: "https://www.google.com/maps/search/{q}",
 	reddit: "https://www.reddit.com/search/?q={q}",
 	geizhals: "https://geizhals.de/?fs={q}",
+	amazon: "https://www.amazon.com/s?k={q}",
+	crates: "https://crates.io/search?q={q}",
 };
 
 function handleRequest(request) {
