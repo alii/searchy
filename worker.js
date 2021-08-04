@@ -18,6 +18,10 @@ const BANG_MAP = {
 	codepen: "https://codepen.io/search/pens?q={q}",
 	genius: "https://genius.com/search?q={q}",
 	spotify: "https://open.spotify.com/search/{q}",
+	pypi: "https://pypi.org/project/{q}/",
+	musicstax: "https://musicstax.com/search?q={q}",
+	discordpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}",
+	dpy: "https://discordpy.readthedocs.io/en/latest/search.html?q={q}"
 };
 
 function handleRequest(request) {
