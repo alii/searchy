@@ -33,7 +33,7 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 	subso: 'https://sub.so/{q}',
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	imp: 'https://impb.in/p/${q}',
-	imperial: "https://imperialb.in/p/${p}",
+	imperial: 'https://imperialb.in/p/${q}',
 };
 
 function handleRequest(request: Request) {
