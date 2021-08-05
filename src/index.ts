@@ -24,12 +24,6 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	lh: 'http://localhost:3000',
 	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
-	
-	// Design
-	figma: 'https://www.figma.com/community/search?model_type=hub_files&q={q}',
-	
-	// Products
-	producthunt: 'https://www.producthunt.com/search?q={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -64,10 +58,19 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 
+	// .new
+	figma: 'https://figma.new',
+	meet: 'https://meet.new',
+	repo: 'https://repo.new',
+	gist: 'https://gist.new',
+	docs: 'https://docs.new',
+	slides: 'https://slides.new',
+	
 	// Misc
 	imp: 'https://impb.in/p/{q}',
 	imperial: 'https://imperialb.in/p/{p}',
 	urban: 'https://www.urbandictionary.com/define.php?term={q}',
+	producthunt: 'https://www.producthunt.com/search?q={q}',
 };
 
 function handleRequest(request: Request) {
