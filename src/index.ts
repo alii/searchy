@@ -35,7 +35,8 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 	imp: 'https://impb.in/p/{q}',
 	imperial: 'https://imperialb.in/p/{p}',
 	help: 'https://github.com/alii/search/blob/master/src/index.ts',
-	figma: 'https://www.figma.com/community/search?model_type=hub_files&q={q}'
+	figma: 'https://www.figma.com/community/search?model_type=hub_files&q={q}',
+	reddit: 'https://www.reddit.com/search/?q={q}'
 };
 
 function handleRequest(request: Request) {
