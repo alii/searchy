@@ -22,6 +22,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	crates: 'https://crates.io/search?q={q}',
 	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
 	lh: 'http://localhost:3000',
+	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
 	
 	// Design
