@@ -43,6 +43,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	
 	// Entertainment
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
+	yt: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	gyazo: 'https://gyazo.com/search/{q}',
 	ig: 'https://instagram.com/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
