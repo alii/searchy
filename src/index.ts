@@ -8,7 +8,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	
 	// Domains 
 	namelix: 'https://namelix.com/app/?keywords={q}',
-	namecheap: 'http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={q}&utm_source=opensearch',
+	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
 	
 	// Programming
 	git: 'https://github.com/search?q={q}',
