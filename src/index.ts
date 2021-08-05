@@ -40,6 +40,7 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 function handleRequest(request: Request) {
 	const url = new URL(request.url);
 	const query = url.searchParams.get('q') ?? '';
+	const engine = url.searchParams.get('engine') ?? 'https://google.com/search?q={q}';
 
 	if (query.startsWith('!')) {
 		const split = query.split(' ');
@@ -54,7 +55,7 @@ function handleRequest(request: Request) {
 		}
 	}
 
-	return Response.redirect('https://google.com/search?q=' + query, 301);
+	return Response.redirect(engine.replace('{q}', query), 301);
 }
 
 addEventListener('fetch', event => event.respondWith(handleRequest(event.request)));
