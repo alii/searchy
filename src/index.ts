@@ -43,12 +43,14 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	ig: 'https://instagram.com/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
 	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
+	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	maps: 'https://www.google.com/maps/search/{q}',
 	reddit: 'https://www.reddit.com/search/?q={q}',
 	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	subso: 'https://sub.so/{q}',
 	fb: 'https://www.facebook.com/search/top/?q={q}',
+	discord: "https://discord.gg/{q}",
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
