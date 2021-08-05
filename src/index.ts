@@ -1,6 +1,6 @@
 const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	// Default
-	help: 'https://github.com/alii/issues',
+	help: 'https://github.com/alii/search/issues',
 	
 	// Package Managers
 	yarn: 'https://yarnpkg.com/?q={q}&p=1',
