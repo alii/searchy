@@ -42,6 +42,7 @@ const BANG_MAP: Record<string, string | ((args: string) => string) | undefined> 
 	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	subso: 'https://sub.so/{q}',
+	fb: 'https://www.facebook.com/search/top/?q={q}',
 
 	/* shopping */
 	amazon: 'https://www.amazon.com/s?k={q}',
