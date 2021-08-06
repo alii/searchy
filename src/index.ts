@@ -8,7 +8,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	
 	// Domains 
 	namelix: 'https://namelix.com/app/?keywords={q}',
-	namecheap: 'http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={q}&utm_source=opensearch',
+	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
 	
 	// Programming
 	git: 'https://github.com/search?q={q}',
@@ -24,12 +24,6 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	lh: 'http://localhost:3000',
 	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
-	
-	// Design
-	figma: 'https://www.figma.com/community/search?model_type=hub_files&q={q}',
-	
-	// Products
-	producthunt: 'https://www.producthunt.com/search?q={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -49,6 +43,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	ig: 'https://instagram.com/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
 	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
+	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	maps: 'https://www.google.com/maps/search/{q}',
 	reddit: 'https://www.reddit.com/search/?q={q}',
 	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
@@ -57,6 +52,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	fb: 'https://www.facebook.com/search/top/?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
+	discord: "https://discord.gg/{q}",
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
@@ -68,11 +64,20 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 
+	// .new
+	figma: 'https://figma.new',
+	meet: 'https://meet.new',
+	repo: 'https://repo.new',
+	gist: 'https://gist.new',
+	docs: 'https://docs.new',
+	slides: 'https://slides.new',
+	
 	// Misc
 	imp: 'https://impb.in/p/{q}',
 	imperial: 'https://imperialb.in/p/{p}',
 	urban: 'https://www.urbandictionary.com/define.php?term={q}',
-	gdrive: 'https://drive.google.com/drive/search?q={q}'
+	gdrive: 'https://drive.google.com/drive/search?q={q}',
+	producthunt: 'https://www.producthunt.com/search?q={q}',
 };
 
 function handleRequest(request: Request) {
