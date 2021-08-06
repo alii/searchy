@@ -7,8 +7,8 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsup src/index.ts",
-		"act": "act",
-		"act:m1": "act --container-architecture linux/amd64"
+		"act": "act pull_request",
+		"act:m1": "act --container-architecture linux/amd64 pull_request"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^2.2.2",
