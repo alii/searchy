@@ -5,10 +5,12 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	// Package Managers
 	yarn: 'https://yarnpkg.com/?q={q}&p=1',
 	npm: 'https://npmjs.org/package/{q}',
+	packagist: 'https://packagist.org/?query={q}',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
+	googledomains: 'https://domains.google.com/registrar/search?searchTerm={q}',
 
 	// Programming
 	git: 'https://github.com/search?q={q}',
@@ -24,10 +26,15 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	lh: 'http://localhost:3000',
 	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
+	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
 	duck: 'https://duckduckgo.com/?q={q}',
+	brave: 'https://search.brave.com/search?q={q}',
+	startpage: 'https://www.startpage.com/sp/search?q={q}',
+	ecosia: 'https://www.ecosia.org/search?q={q}',
+	bing: 'https://www.bing.com/search?q={q}',
 
 	// Music
 	genius: 'https://genius.com/search?q={q}',
@@ -36,6 +43,8 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	soundcloud: 'https://soundcloud.com/search?q={q}',
 	bandcamp: 'https://bandcamp.com/search?q={q}',
 	applemusic: 'https://music.apple.com/search?term={q}',
+	ytmusic: 'https://music.youtube.com/search?q={q}',
+	musixmatch: 'https://www.musixmatch.com/search/{q}',
 
 	// Entertainment
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
@@ -55,16 +64,25 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	netflix: 'https://www.netflix.com/search?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
+	tiktok: 'https://www.tiktok.com/search?q={q}',
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
 	geizhals: 'https://geizhals.de/?fs={q}',
 	ebay: 'https://www.ebay.com/sch/i.html?_nkw={q}',
 	newegg: 'https://www.newegg.com/p/pl?d={q}',
+	amazonde: 'https://www.amazon.de/s?k={q}',
+	amazonnl: 'https://www.amazon.nl/s?k={q}',
+	amazonfr: 'https://www.amazon.fr/s?k={q}',
+	amazonit: 'https://www.amazon.it/s?k={q}',
+	amazones: 'https://www.amazon.es/s?k={q}',
+	amazonnl: 'https://www.amazon.nl/s?k={q}',
+	amazonuk: 'https://www.amazon.co.uk/s?k={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
+	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 
 	// .new
 	figma: 'https://figma.new',
@@ -73,6 +91,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	gist: 'https://gist.new',
 	docs: 'https://docs.new',
 	slides: 'https://slides.new',
+	newportal: 'https://giggl.to/{q}',
 
 	// Misc
 	imp: 'https://impb.in/p/{q}',
@@ -82,6 +101,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	producthunt: 'https://www.producthunt.com/search?q={q}',
 	linkedin: 'https://www.linkedin.com/search/results/all/?keywords={q}&origin=GLOBAL_SEARCH_HEADER&sid=*Xz',
 	lnkdn: 'https://www.linkedin.com/search/results/all/?keywords={q}&origin=GLOBAL_SEARCH_HEADER&sid=*Xz',
+	premid: 'https://premid.app/store?q={q}',
 };
 
 function handleRequest(request: Request) {
