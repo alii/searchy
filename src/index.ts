@@ -53,10 +53,14 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	fb: 'https://www.facebook.com/search/top/?q={q}',
 	discord: 'https://discord.gg/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
+	techboard: 'https://boards.4channel.org/search#/{q}/g',
+	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
 	geizhals: 'https://geizhals.de/?fs={q}',
+	ebay: 'https://www.ebay.com/sch/i.html?_nkw={q}',
+	newegg: 'https://www.newegg.com/p/pl?d={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
@@ -74,6 +78,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	imp: 'https://impb.in/p/{q}',
 	imperial: 'https://imperialb.in/p/{p}',
 	urban: 'https://www.urbandictionary.com/define.php?term={q}',
+	gdrive: 'https://drive.google.com/drive/search?q={q}',
 	producthunt: 'https://www.producthunt.com/search?q={q}',
 };
 
