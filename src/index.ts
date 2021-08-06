@@ -35,7 +35,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	musicstax: 'https://musicstax.com/search?q={q}',
 	soundcloud: 'https://soundcloud.com/search?q={q}',
 	bandcamp: 'https://bandcamp.com/search?q={q}',
-	aaplmusic: 'https://music.apple.com/search?term={q}' // AAPL 
+	applemusic: 'https://music.apple.com/search?term={q}'
 	
 	// Entertainment
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
