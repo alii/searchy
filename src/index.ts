@@ -1,15 +1,15 @@
 const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	// Default
 	help: 'https://github.com/alii/search/issues',
-	
+
 	// Package Managers
 	yarn: 'https://yarnpkg.com/?q={q}&p=1',
 	npm: 'https://npmjs.org/package/{q}',
-	
-	// Domains 
+
+	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
-	
+
 	// Programming
 	git: 'https://github.com/search?q={q}',
 	github: 'https://github.com/{q}',
@@ -29,13 +29,14 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	google: 'https://google.com/search?q={q}',
 	duck: 'https://duckduckgo.com/?q={q}',
 
-	// Music		
+	// Music
 	genius: 'https://genius.com/search?q={q}',
-	spotify: 'https://open.spotify.com/search/{q}',	
+	spotify: 'https://open.spotify.com/search/{q}',
 	musicstax: 'https://musicstax.com/search?q={q}',
 	soundcloud: 'https://soundcloud.com/search?q={q}',
 	bandcamp: 'https://bandcamp.com/search?q={q}',
-	
+	applemusic: 'https://music.apple.com/search?term={q}',
+
 	// Entertainment
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	yt: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
@@ -50,9 +51,10 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	subso: 'https://sub.so/{q}',
 	fb: 'https://www.facebook.com/search/top/?q={q}',
+	discord: 'https://discord.gg/{q}',
+	netflix: 'https://www.netflix.com/search?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
-	discord: "https://discord.gg/{q}",
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
@@ -71,7 +73,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	gist: 'https://gist.new',
 	docs: 'https://docs.new',
 	slides: 'https://slides.new',
-	
+
 	// Misc
 	imp: 'https://impb.in/p/{q}',
 	imperial: 'https://imperialb.in/p/{p}',
