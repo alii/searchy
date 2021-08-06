@@ -80,6 +80,8 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	urban: 'https://www.urbandictionary.com/define.php?term={q}',
 	gdrive: 'https://drive.google.com/drive/search?q={q}',
 	producthunt: 'https://www.producthunt.com/search?q={q}',
+	linkedin: 'https://www.linkedin.com/search/results/all/?keywords={q}&origin=GLOBAL_SEARCH_HEADER&sid=*Xz',
+	lnkdn: 'https://www.linkedin.com/search/results/all/?keywords={q}&origin=GLOBAL_SEARCH_HEADER&sid=*Xz',
 };
 
 function handleRequest(request: Request) {
