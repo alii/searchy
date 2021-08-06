@@ -6,6 +6,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	yarn: 'https://yarnpkg.com/?q={q}&p=1',
 	npm: 'https://npmjs.org/package/{q}',
 	packagist: 'https://packagist.org/?query={q}',
+	pypi: 'https://pypi.org/project/{q}/',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
@@ -17,7 +18,6 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	github: 'https://github.com/{q}',
 	stackoverflow: 'https://stackoverflow.com/search?q={q}',
 	codepen: 'https://codepen.io/search/pens?q={q}',
-	pypi: 'https://pypi.org/project/{q}/',
 	discordpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
 	dpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
 	gitlab: 'https://gitlab.com/search?search={q}',
