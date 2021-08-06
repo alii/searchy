@@ -52,6 +52,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	subso: 'https://sub.so/{q}',
 	fb: 'https://www.facebook.com/search/top/?q={q}',
 	discord: 'https://discord.gg/{q}',
+	netflix: 'https://www.netflix.com/search?q={q}',
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
