@@ -20,6 +20,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	codepen: 'https://codepen.io/search/pens?q={q}',
 	discordpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
 	dpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
+	discordjs: 'https://discord.js.org/#/docs/main/stable/search?query={q}',
+	djs: 'https://discord.js.org/#/docs/main/stable/search?query={q}',
 	gitlab: 'https://gitlab.com/search?search={q}',
 	crates: 'https://crates.io/search?q={q}',
 	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
@@ -101,6 +103,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	premid: 'https://premid.app/store?q={q}',
 	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
 	maps: 'https://www.google.com/maps/search/{q}',
+	presencedb: 'https://www.presencedb.com/search?q={q}',
 
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
