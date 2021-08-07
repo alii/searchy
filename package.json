@@ -6,14 +6,14 @@
 	"author": "Alistair Smith <alistairsmith01@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsup src/index.ts"
+		"build": "tsup src/index.ts",
+		"act": "act pull_request",
+		"act:m1": "act --container-architecture linux/amd64 pull_request"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^2.2.2",
-		"typescript": "^4.3.5"
-	},
-	"dependencies": {
 		"@cloudflare/wrangler": "^1.19.0",
-		"tsup": "^4.13.1"
+		"tsup": "^4.13.1",
+		"typescript": "^4.3.5"
 	}
 }

@@ -1,4 +1,4 @@
-const SITES: Record<string, string | ((args: string) => string) | undefined> = {
+const SITES: Record<string, string | ((query: string) => string) | undefined> = {
 	// Default
 	help: 'https://github.com/alii/search/issues',
 
@@ -6,6 +6,7 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	yarn: 'https://yarnpkg.com/?q={q}&p=1',
 	npm: 'https://npmjs.org/package/{q}',
 	packagist: 'https://packagist.org/?query={q}',
+	pypi: 'https://pypi.org/project/{q}/',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
@@ -17,7 +18,6 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	github: 'https://github.com/{q}',
 	stackoverflow: 'https://stackoverflow.com/search?q={q}',
 	codepen: 'https://codepen.io/search/pens?q={q}',
-	pypi: 'https://pypi.org/project/{q}/',
 	discordpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
 	dpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
 	gitlab: 'https://gitlab.com/search?search={q}',
@@ -46,25 +46,24 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
 
-	// Entertainment
+	// Social
+	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
+	fb: 'https://www.facebook.com/search/top/?q={q}',
+	giggl: 'https://canary.giggl.app/portal/{q}',
+	subso: 'https://sub.so/{q}',
+	reddit: 'https://www.reddit.com/search/?q={q}',
+	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
+	ig: 'https://instagram.com/{q}',
+	tiktok: 'https://www.tiktok.com/search?q={q}',
+	discord: 'https://discord.gg/{q}',
+
+	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	yt: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	gyazo: 'https://gyazo.com/search/{q}',
-	ig: 'https://instagram.com/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
-	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
-	tweet: 'https://twitter.com/intent/tweet?text={q}',
-	maps: 'https://www.google.com/maps/search/{q}',
-	reddit: 'https://www.reddit.com/search/?q={q}',
-	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
-	giggl: 'https://canary.giggl.app/portal/{q}',
-	subso: 'https://sub.so/{q}',
-	fb: 'https://www.facebook.com/search/top/?q={q}',
-	discord: 'https://discord.gg/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
-	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
-	tiktok: 'https://www.tiktok.com/search?q={q}',
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
@@ -76,7 +75,6 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	amazonfr: 'https://www.amazon.fr/s?k={q}',
 	amazonit: 'https://www.amazon.it/s?k={q}',
 	amazones: 'https://www.amazon.es/s?k={q}',
-	amazonnl: 'https://www.amazon.nl/s?k={q}',
 	amazonuk: 'https://www.amazon.co.uk/s?k={q}',
 
 	// Anime
@@ -91,7 +89,6 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	gist: 'https://gist.new',
 	docs: 'https://docs.new',
 	slides: 'https://slides.new',
-	newportal: 'https://giggl.to/{q}',
 
 	// Misc
 	imp: 'https://impb.in/p/{q}',
@@ -102,12 +99,18 @@ const SITES: Record<string, string | ((args: string) => string) | undefined> = {
 	linkedin: 'https://www.linkedin.com/search/results/all/?keywords={q}&origin=GLOBAL_SEARCH_HEADER&sid=*Xz',
 	lnkdn: 'https://www.linkedin.com/search/results/all/?keywords={q}&origin=GLOBAL_SEARCH_HEADER&sid=*Xz',
 	premid: 'https://premid.app/store?q={q}',
+	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
+	maps: 'https://www.google.com/maps/search/{q}',
+
+	// Commands (something that has an action rather than a search)
+	tweet: 'https://twitter.com/intent/tweet?text={q}',
+	newportal: 'https://giggl.to/{q}',
 };
 
 function handleRequest(request: Request) {
 	const url = new URL(request.url);
 	const query = url.searchParams.get('q') ?? '';
-	const engine = url.searchParams.get('engine') ?? SITES.google;
+	const engine = (url.searchParams.get('engine') ?? SITES.google) as string;
 
 	if (query.startsWith('!')) {
 		const split = query.split(' ');
