@@ -104,7 +104,10 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
-	newportal: 'https://giggl.to/{q}',
+	newportal: args => {
+		const formatted = args.startsWith('http') ? args : `https://${args}`;
+		return `https://giggl.to/${formatted}`;
+	},
 };
 
 function handleRequest(request: Request) {
