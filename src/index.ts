@@ -1,4 +1,4 @@
-import SITES from "./links";
+import SITES from './links';
 
 function handleRequest(request: Request) {
 	const url = new URL(request.url);
