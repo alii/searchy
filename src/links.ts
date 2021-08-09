@@ -104,6 +104,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	googleimages: 'https://www.google.com/search?q={q}&tbm=isch',
 	maps: 'https://www.google.com/maps/search/{q}',
 	presencedb: 'https://www.presencedb.com/search?q={q}',
+	polywork: "https://www.polywork.com/{q}",
 
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
