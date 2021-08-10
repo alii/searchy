@@ -56,6 +56,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	reddit: 'https://www.reddit.com/search/?q={q}',
 	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
 	ig: 'https://instagram.com/{q}',
+	instagram: 'https://instagram.com/{q}',
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
 
@@ -78,11 +79,17 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	amazonit: 'https://www.amazon.it/s?k={q}',
 	amazones: 'https://www.amazon.es/s?k={q}',
 	amazonuk: 'https://www.amazon.co.uk/s?k={q}',
+	amazonca: 'https://www.amazon.ca/s?k={q}',
+	amazonmx: 'https://www.amazon.mx/s?k={q}',
+	amazonbr: 'https://www.amazon.com.br/s?k={q}',
+	amazonau: 'https://www.amazon.com.au/s?k={q}',
+	amazonjp: 'https://www.amazon.co.jp/s?k={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
+	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
 
 	// .new
 	figma: 'https://figma.new',
@@ -105,6 +112,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	maps: 'https://www.google.com/maps/search/{q}',
 	presencedb: 'https://www.presencedb.com/search?q={q}',
 	polywork: 'https://www.polywork.com/{q}',
+	pornhub: 'https://www.pornhub.com/video/search?search={q}',
 
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
