@@ -48,6 +48,11 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
 
+	// Movies
+	imdb : 'https://www.imdb.com/find?q={q}',
+	rotten : 'https://www.rottentomatoes.com/search?search={q}',
+	fandango: 'https://www.fandango.com/search?q={q}',
+
 	// Social
 	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
 	fb: 'https://www.facebook.com/search/top/?q={q}',
