@@ -118,7 +118,15 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	presencedb: 'https://www.presencedb.com/search?q={q}',
 	polywork: 'https://www.polywork.com/{q}',
 	pornhub: 'https://www.pornhub.com/video/search?search={q}',
-
+	
+	// Discord Bot Lists
+	topgg: 'https://top.gg/search?q={q}',
+	dbleu: 'https://discord-botlist.eu/search?q={q}',
+	discordbotlisteu: 'https://discord-botlist.eu/search?q={q}',
+	del: 'https://discordextremelist.xyz/en-US/search/?q={q}',
+	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
+	dbotsgg: 'https://discord.bots.gg/search?q={q}',
+	
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	newportal: args => {
