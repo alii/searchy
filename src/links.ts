@@ -29,6 +29,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
 	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
+	gopkg: 'https://pkg.go.dev/search?q={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
