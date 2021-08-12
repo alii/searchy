@@ -22,13 +22,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
-      # ESLint and Prettier must be in `package.json`
+      # Install stuff
       - name: Install Node.js dependencies
         run: yarn install
 
+      # Run Linter
       - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          prettier: true
+        run: yarn lint 
+      
+      # Make Pull Request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
