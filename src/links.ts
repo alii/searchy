@@ -30,6 +30,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
 	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
 	gopkg: 'https://pkg.go.dev/search?q={q}',
+	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -90,12 +91,14 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	amazonbr: 'https://www.amazon.com.br/s?k={q}',
 	amazonau: 'https://www.amazon.com.au/s?k={q}',
 	amazonjp: 'https://www.amazon.co.jp/s?k={q}',
+	amazonin: 'https://www.amazon.co.in/s?k={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
+	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
 
 	// .new
 	figma: 'https://figma.new',
