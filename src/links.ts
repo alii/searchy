@@ -30,6 +30,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
 	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
 	gopkg: 'https://pkg.go.dev/search?q={q}',
+	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -48,6 +49,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	applemusic: 'https://music.apple.com/search?term={q}',
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
+	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', //till donda drops (if it ever does)
 
 	// Movies
 	imdb : 'https://www.imdb.com/find?q={q}',
@@ -72,8 +74,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	gyazo: 'https://gyazo.com/search/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
-	techboard: 'https://boards.4channel.org/search#/{q}/g',
-
+	pornhub: 'https://www.pornhub.com/video/search?search={q}',
+	
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
 	geizhals: 'https://geizhals.de/?fs={q}',
@@ -90,12 +92,14 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	amazonbr: 'https://www.amazon.com.br/s?k={q}',
 	amazonau: 'https://www.amazon.com.au/s?k={q}',
 	amazonjp: 'https://www.amazon.co.jp/s?k={q}',
+	amazonin: 'https://www.amazon.co.in/s?k={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
+	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
 
 	// .new
 	figma: 'https://figma.new',
@@ -118,7 +122,9 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	maps: 'https://www.google.com/maps/search/{q}',
 	presencedb: 'https://www.presencedb.com/search?q={q}',
 	polywork: 'https://www.polywork.com/{q}',
-	pornhub: 'https://www.pornhub.com/video/search?search={q}',
+	imgur: 'https://imgur.com/search?q={q}',
+	imgflip: 'https://imgflip.com/memesearch?q={q}',
+	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
