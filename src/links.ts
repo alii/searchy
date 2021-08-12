@@ -49,6 +49,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	applemusic: 'https://music.apple.com/search?term={q}',
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
+	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', //till donda drops (if it ever does)
 
 	// Movies
 	imdb : 'https://www.imdb.com/find?q={q}',
@@ -73,7 +74,6 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	gyazo: 'https://gyazo.com/search/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
-	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	pornhub: 'https://www.pornhub.com/video/search?search={q}',
 	
 	// Shopping
@@ -124,6 +124,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	polywork: 'https://www.polywork.com/{q}',
 	imgur: 'https://imgur.com/search?q={q}',
 	imgflip: 'https://imgflip.com/memesearch?q={q}',
+	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
