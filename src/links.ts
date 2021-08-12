@@ -74,7 +74,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	twitch: 'https://www.twitch.tv/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
-
+	pornhub: 'https://www.pornhub.com/video/search?search={q}',
+	
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
 	geizhals: 'https://geizhals.de/?fs={q}',
@@ -121,7 +122,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	maps: 'https://www.google.com/maps/search/{q}',
 	presencedb: 'https://www.presencedb.com/search?q={q}',
 	polywork: 'https://www.polywork.com/{q}',
-	pornhub: 'https://www.pornhub.com/video/search?search={q}',
+	imgur: 'https://imgur.com/search?q={q}',
+	imgflip: 'https://imgflip.com/memesearch?q={q}',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
