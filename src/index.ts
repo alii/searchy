@@ -10,8 +10,7 @@ function handleRequest(request: Request) {
 		const site = SITES[split[0].toLowerCase().replace('!', '')];
 
 		if (site) {
-			const [, ...rest] = split;
-			const joined = rest.join(' ');
+			const joined = split.slice(1).join(' ');
 			const parsed = typeof site === 'function' ? site(joined) : site;
 
 			return Response.redirect(parsed.replace('{q}', joined), 301);
