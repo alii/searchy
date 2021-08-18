@@ -62,6 +62,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	subso: 'https://sub.so/{q}',
 	reddit: 'https://www.reddit.com/search/?q={q}',
+	'r/': 'https://www.reddit.com/r/{q}',
+	'u/': 'https://www.reddit.com/u/{q}',
 	pinterest: 'https://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
 	ig: 'https://instagram.com/{q}',
 	instagram: 'https://instagram.com/{q}',
