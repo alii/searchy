@@ -7,6 +7,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	npm: 'https://npmjs.org/package/{q}',
 	packagist: 'https://packagist.org/?query={q}',
 	pypi: 'https://pypi.org/project/{q}/',
+	brew: 'https://formulae.brew.sh/formula/{q}#default',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
