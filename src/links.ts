@@ -128,6 +128,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	imgur: 'https://imgur.com/search?q={q}',
 	imgflip: 'https://imgflip.com/memesearch?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
+	udemy: 'https://www.udemy.com/courses/search/?src=ukw&q={q}',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
