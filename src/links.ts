@@ -129,6 +129,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	imgflip: 'https://imgflip.com/memesearch?q={q}',
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	udemy: 'https://www.udemy.com/courses/search/?src=ukw&q={q}',
+	libgen: 'http://libgen.li/index.php?req={q}&res=25',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
