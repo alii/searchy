@@ -73,6 +73,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 
 	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
+	odysee: 'https://odysee.com/search?q={q}',
 	yt: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	gyazo: 'https://gyazo.com/search/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
