@@ -7,6 +7,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	npm: 'https://npmjs.org/package/{q}',
 	packagist: 'https://packagist.org/?query={q}',
 	pypi: 'https://pypi.org/project/{q}/',
+	brew: 'https://formulae.brew.sh/formula/{q}#default',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
@@ -29,6 +30,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
 	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
+	gopkg: 'https://pkg.go.dev/search?q={q}',
+	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -47,6 +50,12 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	applemusic: 'https://music.apple.com/search?term={q}',
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
+	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', //till donda drops (if it ever does)
+
+	// Movies
+	imdb : 'https://www.imdb.com/find?q={q}',
+	rotten : 'https://www.rottentomatoes.com/search?search={q}',
+	fandango: 'https://www.fandango.com/search?q={q}',
 
 	// Social
 	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
@@ -54,19 +63,23 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	giggl: 'https://canary.giggl.app/portal/{q}',
 	subso: 'https://sub.so/{q}',
 	reddit: 'https://www.reddit.com/search/?q={q}',
-	pinterest: 'http://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
+	'r/': 'https://www.reddit.com/r/{q}',
+	'u/': 'https://www.reddit.com/u/{q}',
+	pinterest: 'https://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
 	ig: 'https://instagram.com/{q}',
+	instagram: 'https://instagram.com/{q}',
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
 
 	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
+	odysee: 'https://odysee.com/search?q={q}',
 	yt: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
 	gyazo: 'https://gyazo.com/search/{q}',
 	twitch: 'https://www.twitch.tv/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
-	techboard: 'https://boards.4channel.org/search#/{q}/g',
-
+	pornhub: 'https://www.pornhub.com/video/search?search={q}',
+	
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
 	geizhals: 'https://geizhals.de/?fs={q}',
@@ -78,11 +91,19 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	amazonit: 'https://www.amazon.it/s?k={q}',
 	amazones: 'https://www.amazon.es/s?k={q}',
 	amazonuk: 'https://www.amazon.co.uk/s?k={q}',
+	amazonca: 'https://www.amazon.ca/s?k={q}',
+	amazonmx: 'https://www.amazon.mx/s?k={q}',
+	amazonbr: 'https://www.amazon.com.br/s?k={q}',
+	amazonau: 'https://www.amazon.com.au/s?k={q}',
+	amazonjp: 'https://www.amazon.co.jp/s?k={q}',
+	amazonin: 'https://www.amazon.co.in/s?k={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
 	myanimelist: 'https://myanimelist.net/search/all?q={q}',
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
+	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
+	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
 
 	// .new
 	figma: 'https://figma.new',
@@ -105,7 +126,20 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	maps: 'https://www.google.com/maps/search/{q}',
 	presencedb: 'https://www.presencedb.com/search?q={q}',
 	polywork: 'https://www.polywork.com/{q}',
-
+	imgur: 'https://imgur.com/search?q={q}',
+	imgflip: 'https://imgflip.com/memesearch?q={q}',
+	techboard: 'https://boards.4channel.org/search#/{q}/g',
+	udemy: 'https://www.udemy.com/courses/search/?src=ukw&q={q}',
+	libgen: 'http://libgen.li/index.php?req={q}&res=25',
+	
+	// Discord Bot Lists
+	topgg: 'https://top.gg/search?q={q}',
+	dbleu: 'https://discord-botlist.eu/search?q={q}',
+	discordbotlisteu: 'https://discord-botlist.eu/search?q={q}',
+	del: 'https://discordextremelist.xyz/en-US/search/?q={q}',
+	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
+	dbotsgg: 'https://discord.bots.gg/search?q={q}',
+	
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	newportal: args => {
