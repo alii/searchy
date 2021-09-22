@@ -2,7 +2,7 @@ import SITES from './links';
 
 function handleRequest(request: Request) {
 	const url = new URL(request.url);
-	const query = url.searchParams.get('q') ?? '';
+	const query = encodeURIComponent(url.searchParams.get('q') ?? '');
 	const engine = (url.searchParams.get('engine') ?? SITES.google) as string;
 
 	if (query.startsWith('!')) {
