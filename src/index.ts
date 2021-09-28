@@ -14,7 +14,7 @@ function handleRequest(request: Request) {
 			const joined = rest.join(' ');
 			const parsed = typeof site === 'function' ? site(joined) : site;
 
-			return Response.redirect(parsed.replace('{q}', encodeURIComponent(joined)), 301);
+			return Response.redirect(parsed.replace('{q}', joined), 301);
 		}
 	}
 
