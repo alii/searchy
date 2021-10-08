@@ -32,6 +32,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
 	gopkg: 'https://pkg.go.dev/search?q={q}',
 	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
+	dns: 'https://www.nslookup.io/dns-records/{q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
