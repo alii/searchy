@@ -70,6 +70,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	instagram: 'https://instagram.com/{q}',
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
+	sub: 'https://reddit.com/r/{q}',
 
 	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
