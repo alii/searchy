@@ -7,8 +7,17 @@ function handleRequest(request: Request) {
 
 	if (query.startsWith('!')) {
 		const split = query.split(' ');
-		const site = SITES[split[0].toLowerCase().replace('!', '')];
-
+		let site = SITES[split[0].toLowerCase().replace('!', '')];
+		if (!site) {
+			// support for multiple world sites
+			let q: string[] = [];
+			split.map((s) => {
+				q.push(s);
+				if (SITES[q.join(" ").toLowerCase().replace('!', '')]) {
+					site = SITES[q.join(" ").toLowerCase().replace('!', '')]
+				}
+			})
+		}
 		if (site) {
 			const [, ...rest] = split;
 			const joined = rest.join(' ');
