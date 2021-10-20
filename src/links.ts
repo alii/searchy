@@ -33,6 +33,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	gopkg: 'https://pkg.go.dev/search?q={q}',
 	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
 	dns: 'https://www.nslookup.io/dns-records/{q}',
+    node: 'https://nodejs.org',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -114,6 +115,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	gist: 'https://gist.new',
 	docs: 'https://docs.new',
 	slides: 'https://slides.new',
+    'node playground': 'https://node.new',
 
 	// Misc
 	imp: 'https://impb.in/p/{q}',
