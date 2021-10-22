@@ -32,6 +32,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	gitea: 'https://gitea.com/explore/repos?tab=&sort=recentupdate&q={q}',
 	gopkg: 'https://pkg.go.dev/search?q={q}',
 	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
+	dns: 'https://www.nslookup.io/dns-records/{q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -70,6 +71,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	instagram: 'https://instagram.com/{q}',
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
+	sub: 'https://reddit.com/r/{q}',
 
 	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
@@ -133,6 +135,9 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	libgen: 'http://libgen.li/index.php?req={q}&res=25',
 	gsmarena: 'https://gsmarena.com/res.php3?sSearch={q}',
 	phone: 'https://gsmarena.com/res.php3?sSearch={q}',
+	ark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
+	intelark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
+
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
