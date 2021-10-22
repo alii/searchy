@@ -131,6 +131,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	techboard: 'https://boards.4channel.org/search#/{q}/g',
 	udemy: 'https://www.udemy.com/courses/search/?src=ukw&q={q}',
 	libgen: 'http://libgen.li/index.php?req={q}&res=25',
+	gsmarena: 'https://gsmarena.com/res.php3?sSearch={q}',
+	phone: 'https://gsmarena.com/res.php3?sSearch={q}',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
