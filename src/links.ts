@@ -51,8 +51,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	applemusic: 'https://music.apple.com/search?term={q}',
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
-	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', //till donda drops (if it ever does)
-
+	
 	// Movies
 	imdb : 'https://www.imdb.com/find?q={q}',
 	rotten : 'https://www.rottentomatoes.com/search?search={q}',
