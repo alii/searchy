@@ -135,6 +135,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	libgen: 'http://libgen.li/index.php?req={q}&res=25',
 	ark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	intelark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
+	fitgirl: 'https://fitgirl-repacks.site/?s={q}',
 	
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
