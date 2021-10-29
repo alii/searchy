@@ -6,6 +6,7 @@ zone_id = ''
 usage_model = ''
 compatibility_flags = []
 workers_dev = true
+compatibility_date = "2021-10-29"
 
 [build]
 command = "yarn && yarn build"

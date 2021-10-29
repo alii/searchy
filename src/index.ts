@@ -1,7 +1,7 @@
 import {SITES} from './links';
 
 function encodeChars(text: string) {
-	return text.replace(/\+/g, encodeURIComponent);
+	return text.replace(/( |\+)/g, encodeURIComponent);
 }
 
 function handleRequest(request: Request) {
@@ -28,4 +28,6 @@ function handleRequest(request: Request) {
 	return Response.redirect(engine.replace('{q}', encodeChars(query)), 301);
 }
 
-addEventListener('fetch', event => event.respondWith(handleRequest(event.request)));
+addEventListener('fetch', event => {
+	return event.respondWith(handleRequest(event.request));
+});
