@@ -148,6 +148,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
+	twfollow: 'https://twitter.com/intent/follow?screen_name={q}',
 	newportal: args => {
 		const formatted = args.startsWith('http') ? args : `https://${args}`;
 		return `https://giggl.to/${formatted}`;
