@@ -7,14 +7,14 @@
   resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-2.2.2.tgz#1bced16bba801d7af987da835467545bb5cc7ac6"
   integrity sha512-kaMn2rueJ0PL1TYVGknTCh0X0x0d9G+FNXAFep7/4uqecEZoQb/63o6rOmMuiqI09zLuHV6xhKRXinokV/MY9A==
 
-"@cloudflare/wrangler@^1.19.0":
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/wrangler/-/wrangler-1.19.0.tgz#1cf2d7332b74e60a12730f9aa69b7e562022d57b"
-  integrity sha512-fbvJEzb8P/IulJus72pG/G3THDyNk+YGwl1PzuMGlJGF+yvCaNWj+NmyZERmQxfq2bDs8UTUSQTrIdYVGH1tXQ==
+"@cloudflare/wrangler@^1.19.3":
+  version "1.19.3"
+  resolved "https://registry.yarnpkg.com/@cloudflare/wrangler/-/wrangler-1.19.3.tgz#1519bb2dd8763598607a04ae71f80b79cfa0a90f"
+  integrity sha512-xvmj4xzarcHDcKdYaYVJ5E49eA0/2oNPz+9gMaQ88ym3RGgc0OxxFkCV0+XUb11QiAl2VEEtZr0/jbQXypvDcA==
   dependencies:
     axios "^0.21.1"
     rimraf "^3.0.2"
-    tar "^6.0.2"
+    tar "^6.1.10"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -172,10 +172,10 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-esbuild@^0.12.9:
-  version "0.12.18"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.18.tgz#e5db16372188c2b4d395f7f55fdade27f6a119fa"
-  integrity sha512-arWhBQSy+oiBAp8VRRCFvAU+3jyf0gGacABLO3haMHboXCDjzq4WUqyQklst2XRuFS8MXgap+9uvODqj9Iygpg==
+esbuild@^0.12.28:
+  version "0.12.29"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
+  integrity sha512-w/XuoBCSwepyiZtIRsKsetiLDUVGPVw1E/R3VTFSecIy8UR7Cq3SOtwKHJMFoVqqVG36aGkzh4e8BvpO1Fdc7g==
 
 execa@^5.0.0:
   version "5.1.1"
@@ -514,10 +514,10 @@ postcss-load-config@^3.0.1:
     lilconfig "^2.0.3"
     yaml "^1.10.2"
 
-prettier@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
-  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
+prettier@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
+  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -548,10 +548,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.45.2:
-  version "2.56.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.56.0.tgz#daa832955d2b58f1ed52a3c4c85b7d1adaf076d0"
-  integrity sha512-weEafgbjbHCnrtJPNyCrhYnjP62AkF04P0BcV/1mofy1+gytWln4VVB1OK462cq2EAyWzRDpTMheSP/o+quoiA==
+rollup@^2.56.1:
+  version "2.57.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.57.0.tgz#c1694475eb22e1022477c0f4635fd0ac80713173"
+  integrity sha512-bKQIh1rWKofRee6mv8SrF2HdP6pea5QkwBZSMImJysFj39gQuiV8MEPBjXOCpzk3wSYp63M2v2wkWBmFC8O/rg==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -589,10 +589,10 @@ strip-final-newline@^2.0.0:
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
 
-sucrase@^3.18.1:
-  version "3.20.0"
-  resolved "https://registry.yarnpkg.com/sucrase/-/sucrase-3.20.0.tgz#a80e865830e27d66a912c938491d474164b06205"
-  integrity sha512-Rsp+BX7DRuCleJvBAHN7gQ3ddk7U0rJev19XlIBF6dAq9vX4Tr5mHk4E7+ig/I7BM3DLYotCmm20lfBElT2XtQ==
+sucrase@^3.20.1:
+  version "3.20.1"
+  resolved "https://registry.yarnpkg.com/sucrase/-/sucrase-3.20.1.tgz#1c055e97d0fab2f9857f02461364075b3a4ab226"
+  integrity sha512-BIG59HaJOxNct9Va6KvT5yzBA/rcMGetzvZyTx0ZdCcspIbpJTPS64zuAfYlJuOj+3WaI5JOdA+F0bJQQi8ZiQ==
   dependencies:
     commander "^4.0.0"
     glob "7.1.6"
@@ -608,10 +608,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-tar@^6.0.2:
-  version "6.1.6"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.6.tgz#c23d797b0a1efe5d479b1490805c5443f3560c5d"
-  integrity sha512-oaWyu5dQbHaYcyZCTfyPpC+VmI62/OM2RTUYavTk1MDr1cwW5Boi3baeYQKiZbY2uSQJGr+iMOzb/JFxLrft+g==
+tar@^6.1.10:
+  version "6.1.11"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621"
+  integrity sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
@@ -651,29 +651,29 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
-tsup@^4.13.1:
-  version "4.13.1"
-  resolved "https://registry.yarnpkg.com/tsup/-/tsup-4.13.1.tgz#052265d281ebbb2a124867b420c69cf6a5f3e4d3"
-  integrity sha512-OSJjTe8Kj+mm0gagg6Ory5vNm2NkQ11IfaDMjgGA3DDco0c2G5kObLkqmRDTmvFqw24mF2knfDMnq7vEuD5+7w==
+tsup@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/tsup/-/tsup-5.2.1.tgz#4ad4debd1d7852e8c4bb40075ebd2ee85efe7715"
+  integrity sha512-eQmRfKoHIiTFg38Dh2MARCx3J0+P+wbwB5iSHcXTwsnVR9csGLpln5qqBjdgyAGV1VTbOmyU37veCi2eA+wuqA==
   dependencies:
     cac "^6.7.2"
     chalk "^4.1.0"
     chokidar "^3.5.1"
     debug "^4.3.1"
-    esbuild "^0.12.9"
+    esbuild "^0.12.28"
     execa "^5.0.0"
     globby "^11.0.3"
     joycon "^3.0.1"
     postcss-load-config "^3.0.1"
     resolve-from "^5.0.0"
-    rollup "^2.45.2"
-    sucrase "^3.18.1"
+    rollup "^2.56.1"
+    sucrase "^3.20.1"
     tree-kill "^1.2.2"
 
-typescript@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
-  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
+typescript@^4.4.3:
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
+  integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
 
 which@^2.0.1:
   version "2.0.2"

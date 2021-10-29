@@ -1,4 +1,4 @@
-const SITES: Record<string, string | ((query: string) => string) | undefined> = {
+export const SITES: Record<string, string | ((query: string) => string) | undefined> = {
 	// Default
 	help: 'https://github.com/alii/search/issues',
 
@@ -54,8 +54,8 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', //till donda drops (if it ever does)
 
 	// Movies
-	imdb : 'https://www.imdb.com/find?q={q}',
-	rotten : 'https://www.rottentomatoes.com/search?search={q}',
+	imdb: 'https://www.imdb.com/find?q={q}',
+	rotten: 'https://www.rottentomatoes.com/search?search={q}',
 	fandango: 'https://www.fandango.com/search?q={q}',
 
 	// Social
@@ -81,7 +81,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	twitch: 'https://www.twitch.tv/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
 	pornhub: 'https://www.pornhub.com/video/search?search={q}',
-	
+
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
 	geizhals: 'https://geizhals.de/?fs={q}',
@@ -135,7 +135,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	libgen: 'http://libgen.li/index.php?req={q}&res=25',
 	ark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	intelark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
-	
+
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
 	dbleu: 'https://discord-botlist.eu/search?q={q}',
@@ -143,7 +143,7 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 	del: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	dbotsgg: 'https://discord.bots.gg/search?q={q}',
-	
+
 	// Commands (something that has an action rather than a search)
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	newportal: args => {
@@ -151,5 +151,3 @@ const SITES: Record<string, string | ((query: string) => string) | undefined> = 
 		return `https://giggl.to/${formatted}`;
 	},
 };
-
-export default SITES;

@@ -7,15 +7,16 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsup src/index.ts",
+		"dev": "wrangler dev",
 		"lint": "yarn prettier --write .",
 		"act": "act pull_request",
 		"act:m1": "act --container-architecture linux/amd64 pull_request"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^2.2.2",
-		"@cloudflare/wrangler": "^1.19.0",
-		"prettier": "2.3.2",
-		"tsup": "^4.13.1",
-		"typescript": "^4.3.5"
+		"@cloudflare/wrangler": "^1.19.3",
+		"prettier": "2.4.1",
+		"tsup": "^5.2.1",
+		"typescript": "^4.4.3"
 	}
 }
