@@ -137,6 +137,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	phone: 'https://gsmarena.com/res.php3?sSearch={q}',
 	ark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	intelark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
+	nato: 'https://cryptii.com/pipes/nato-phonetic-alphabet',
 
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
