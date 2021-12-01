@@ -34,6 +34,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
 	dns: 'https://www.nslookup.io/dns-records/{q}',
 	tsplay: 'https://www.typescriptlang.org/play?#code/{q}',
+	docker: 'https://hub.docker.com/_/{q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
