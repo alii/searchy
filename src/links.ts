@@ -148,10 +148,13 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	del: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	dbotsgg: 'https://discord.bots.gg/search?q={q}',
-
-	// Commands (something that has an action rather than a search)
+	
+	// Twitter utils
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	twfollow: 'https://twitter.com/intent/follow?screen_name={q}',
+	rt: 'https://twitter.com/intent/retweet?tweet_id={q}',
+
+	// Commands (something that has an action rather than a search)
 	newportal: args => {
 		const formatted = args.startsWith('http') ? args : `https://${args}`;
 		return `https://giggl.to/${formatted}`;
