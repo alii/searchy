@@ -69,7 +69,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	'r/': 'https://www.reddit.com/r/{q}',
 	'u/': 'https://www.reddit.com/u/{q}',
 	pinterest: 'https://www.pinterest.com/search/pins/?q={q}&rs=direct_navigation',
-	ig: 'https://instagram.com/{q}',
+	ig: 'https://instagram.com/{q}/',
 	instagram: 'https://instagram.com/{q}',
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
