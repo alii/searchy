@@ -8,6 +8,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	packagist: 'https://packagist.org/?query={q}',
 	pypi: 'https://pypi.org/project/{q}/',
 	brew: 'https://formulae.brew.sh/formula/{q}#default',
+	aur: 'https://aur.archlinux.org/packages/?K={q}',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
