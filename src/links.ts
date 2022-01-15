@@ -36,6 +36,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	dns: 'https://www.nslookup.io/dns-records/{q}',
 	tsplay: 'https://www.typescriptlang.org/play?#code/{q}',
 	docker: 'https://hub.docker.com/_/{q}',
+	mdn: 'https://developer.mozilla.org/en-US/search?q={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
