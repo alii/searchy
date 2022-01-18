@@ -45,7 +45,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	startpage: 'https://www.startpage.com/sp/search?q={q}',
 	ecosia: 'https://www.ecosia.org/search?q={q}',
 	bing: 'https://www.bing.com/search?q={q}',
-  wiby: "https://wiby.me/?q={q}",
+ 	wiby: "https://wiby.me/?q={q}",
 
 	// Music
 	genius: 'https://genius.com/search?q={q}',
