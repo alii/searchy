@@ -119,6 +119,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	gist: 'https://gist.new',
 	docs: 'https://docs.new',
 	slides: 'https://slides.new',
+	repl: 'https://replit.new',
 
 	// Misc
 	imp: 'https://impb.in/p/{q}',
@@ -143,6 +144,8 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	ark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	intelark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	nato: 'https://cryptii.com/pipes/nato-phonetic-alphabet',
+	kymeme: 'https://knowyourmeme.com/search?q={q}',
+	cheat: 'https://cheat.sh/{q}',
 
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
