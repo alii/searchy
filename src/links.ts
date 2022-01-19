@@ -143,6 +143,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	ark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	intelark: 'https://ark.intel.com/content/www/us/en/ark/search.html?_charset_=UTF-8&q={q}',
 	nato: 'https://cryptii.com/pipes/nato-phonetic-alphabet',
+	kymeme: 'https://knowyourmeme.com/search?q={q}',
 
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
