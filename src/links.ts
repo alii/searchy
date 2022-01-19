@@ -9,8 +9,6 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	pypi: 'https://pypi.org/project/{q}/',
 	brew: 'https://formulae.brew.sh/formula/{q}#default',
 	aur: 'https://aur.archlinux.org/packages/?K={q}',
-	gopkg: 'https://pkg.go.dev/search?q={q}',
-	crates: 'https://crates.io/search?q={q}',
 	gems: 'https://rubygems.org/search?query={q}',
 	hex: 'https://hex.pm/packages?search={q}',
 	nuget: 'https://www.nuget.org/packages?q={q}',
