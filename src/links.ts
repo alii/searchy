@@ -38,6 +38,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	lighthouse: 'https://developers.google.com/speed/pagespeed/insights/?url={q}',
 	dns: 'https://www.nslookup.io/dns-records/{q}',
 	tsplay: 'https://www.typescriptlang.org/play?#code/{q}',
+	goplay: 'https://goplay.tools/',
 	docker: 'https://hub.docker.com/_/{q}',
 	mdn: 'https://developer.mozilla.org/en-US/search?q={q}',
 
