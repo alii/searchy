@@ -150,6 +150,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	nato: 'https://cryptii.com/pipes/nato-phonetic-alphabet',
 	kymeme: 'https://knowyourmeme.com/search?q={q}',
 	cheat: 'https://cheat.sh/{q}',
+	hackernews: 'https://hn.algolia.com/?q={q}',
 
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
