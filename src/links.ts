@@ -1,3 +1,5 @@
+import {etherscanTypeMap} from './util';
+
 export const SITES: Record<string, string | ((query: string) => string) | undefined> = {
 	// Default
 	help: 'https://github.com/alii/search/issues',
@@ -12,7 +14,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	gems: 'https://rubygems.org/search?query={q}',
 	hex: 'https://hex.pm/packages?search={q}',
 	nuget: 'https://www.nuget.org/packages?q={q}',
-	
+
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
@@ -49,7 +51,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	startpage: 'https://www.startpage.com/sp/search?q={q}',
 	ecosia: 'https://www.ecosia.org/search?q={q}',
 	bing: 'https://www.bing.com/search?q={q}',
- 	wiby: "https://wiby.me/?q={q}",
+	wiby: 'https://wiby.me/?q={q}',
 
 	// Music
 	genius: 'https://genius.com/search?q={q}',
@@ -159,11 +161,15 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	del: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	dbotsgg: 'https://discord.bots.gg/search?q={q}',
-	
+
 	// Twitter utils
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
 	twfollow: 'https://twitter.com/intent/follow?screen_name={q}',
 	rt: 'https://twitter.com/intent/retweet?tweet_id={q}',
+
+	// Cryptoooo
+	eth: ([type, q]) =>
+		`https://etherscan.io/${type in etherscanTypeMap ? etherscanTypeMap[type as keyof typeof etherscanTypeMap] : type}/${q}`,
 
 	// Commands (something that has an action rather than a search)
 	newportal: args => {
