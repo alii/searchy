@@ -168,8 +168,11 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	rt: 'https://twitter.com/intent/retweet?tweet_id={q}',
 
 	// Cryptoooo
-	eth: ([type, q]) =>
-		`https://etherscan.io/${type in etherscanTypeMap ? etherscanTypeMap[type as keyof typeof etherscanTypeMap] : type}/${q}`,
+
+	eth: args => {
+		const [type, q] = args.split(' ');
+		return `https://etherscan.io/${type in etherscanTypeMap ? etherscanTypeMap[type as keyof typeof etherscanTypeMap] : type}/${q}`;
+	},
 
 	// Commands (something that has an action rather than a search)
 	newportal: args => {
