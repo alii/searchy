@@ -43,6 +43,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	goplay: 'https://goplay.tools/',
 	docker: 'https://hub.docker.com/_/{q}',
 	mdn: 'https://developer.mozilla.org/en-US/search?q={q}',
+	daily: 'https://app.daily.dev/search?q={q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -56,6 +57,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	// Music
 	genius: 'https://genius.com/search?q={q}',
 	spotify: 'https://open.spotify.com/search/{q}',
+	deezer: 'https://www.deezer.com/search/{q}',
 	musicstax: 'https://musicstax.com/search?q={q}',
 	soundcloud: 'https://soundcloud.com/search?q={q}',
 	bandcamp: 'https://bandcamp.com/search?q={q}',
