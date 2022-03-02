@@ -169,6 +169,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 
 	// Cryptoooo
 
+	gas: 'https://etherscan.io/gastracker',
 	eth: args => {
 		const [type, q] = args.split(' ');
 		return `https://etherscan.io/${type in etherscanTypeMap ? etherscanTypeMap[type as keyof typeof etherscanTypeMap] : type}/${q}`;
