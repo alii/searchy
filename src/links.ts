@@ -56,6 +56,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	// Music
 	genius: 'https://genius.com/search?q={q}',
 	spotify: 'https://open.spotify.com/search/{q}',
+	deezer: 'https://www.deezer.com/search/{q}'
 	musicstax: 'https://musicstax.com/search?q={q}',
 	soundcloud: 'https://soundcloud.com/search?q={q}',
 	bandcamp: 'https://bandcamp.com/search?q={q}',
