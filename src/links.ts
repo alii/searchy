@@ -155,6 +155,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	kymeme: 'https://knowyourmeme.com/search?q={q}',
 	cheat: 'https://cheat.sh/{q}',
 	hackernews: 'https://hn.algolia.com/?q={q}',
+	pixiv: 'https://www.pixiv.net/en/tags/{q}',
 
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
