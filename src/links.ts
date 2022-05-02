@@ -24,7 +24,6 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	git: 'https://github.com/search?q={q}',
 	github: 'https://github.com/search?q={q}',
 	gh: 'https://github.com/search?q={q}',
-	gitlab: 'https://github.com/search?q={q}',
 	stackoverflow: 'https://stackoverflow.com/search?q={q}',
 	codepen: 'https://codepen.io/search/pens?q={q}',
 	discordpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
