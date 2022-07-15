@@ -116,7 +116,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	amazonin: 'https://www.amazon.co.in/s?k={q}',
 	amazonse: 'https://www.amazon.se/s?k={q}',
 	banggood: 'https://www.banggood.com/search/{q}.html?from=nav',
-	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not -H4rldev
+	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not. -H4rldev
 	wish: 'https://www.wish.com/search/{q}', // This site sucks but why not. -H4rldev
 
 	// Anime
@@ -127,7 +127,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
 	zoro: 'https://zoro.to/search?keyword={q}',
 	'9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
-	'9anime': 'https://9anime.id/search?keyword={q}&vrf=Ux9h8vwyLd',  // Not entirely sure if these work either -H4rldev
+	'9anime': 'https://9anime.id/search?keyword={q}&vrf=Ux9h8vwyLd',  // Not entirely sure if these work either. -H4rldev
 	'9anime': 'https://9anime.pl/search?keyword={q}&vrf=Ux9h8vwyLd',
          
 	// .new
@@ -177,19 +177,19 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	dbotsgg: 'https://discord.bots.gg/search?q={q}',
 
 	//Torrent Trackers (Optional)
-	'1337x': 'https://1337x.to/search/{q}/1/', // Universal for Movies, Shows, Anime, Porn, Software and Games.
-	rarbg: 'http://rarbg.to/torrents.php?search={q}', // Movies, Shows and Porn + Some Software.
-	rutracker: 'https://rutracker.org/forum/login.php?redirect=tracker.php?nm={q}', // Is in russian and requires an account to search.
-        nyaa: 'https://nyaa.si/?f=0&c=0_0&q={q}', // Anime Torrents.
-	psa: 'https://psa.pm/?s={q}', // Movies and Shows re-encoded to x265.
-        h10anime: 'https://hi10anime.com/?s={q}', // Anime Torrents.
-	torrentgalaxy: 'https://torrentgalaxy.mx/', // Filled with popups and ads. Really annoying tracker.
-	rutor: 'http://rutor.info/search/{q}', // Russian Games Tracker.
-	gamestorrents: 'https://www.gamestorrents.fm/?s={q}', // Spanish or Central/South American Games tracker.
-	'gnarly-repacks': 'https://www.gnarly-repacks.site/?s={q}', // Games Site.
-        fitgirl: 'https://fitgirl-repacks.site/?s={q}', // One of the most popular sources for repacks of games. Highly recommkaoskrew: 'ended.
-        'dodi-repacks': 'https://dodi-repacks.site/?s={q}', // A lot of dodi's content is the same as fitgirl's.
-	kaoskrew: 'https://kaoskrew.org/search.php?keywords=yeah&fid%5B0%5D=13' // Torrenting forum for games. Many known crackers post their content there.
+	'1337x': 'https://1337x.to/search/{q}/1/', // Universal for Movies, Shows, Anime, Porn, Software and Games. -H4rldev
+	rarbg: 'http://rarbg.to/torrents.php?search={q}', // Movies, Shows and Porn + Some Software. -H4rldev
+	rutracker: 'https://rutracker.org/forum/login.php?redirect=tracker.php?nm={q}', // Is in russian and requires an account to search. -H4rldev
+        nyaa: 'https://nyaa.si/?f=0&c=0_0&q={q}', // Anime Torrents. -H4rldev
+	psa: 'https://psa.pm/?s={q}', // Movies and Shows re-encoded to x265. -H4rldev
+        h10anime: 'https://hi10anime.com/?s={q}', // Anime Torrents. -H4rldev
+	torrentgalaxy: 'https://torrentgalaxy.mx/', // Filled with popups and ads. Really annoying tracker. -H4rldev
+	rutor: 'http://rutor.info/search/{q}', // Russian Games Tracker. -H4rldev
+	gamestorrents: 'https://www.gamestorrents.fm/?s={q}', // Spanish or Central/South American Games tracker. -H4rldev
+	'gnarly-repacks': 'https://www.gnarly-repacks.site/?s={q}', // Games Site. -H4rldev
+        fitgirl: 'https://fitgirl-repacks.site/?s={q}', // One of the most popular sources for repacks of games. Highly recommended. -H4rldev
+        'dodi-repacks': 'https://dodi-repacks.site/?s={q}', // A lot of dodi's content is the same as fitgirl's. -H4rldev
+	kaoskrew: 'https://kaoskrew.org/search.php?keywords=yeah&fid%5B0%5D=13' // Torrenting forum for games. Many known crackers post their content there. -H4rldev
 
 	// Twitter utils
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
