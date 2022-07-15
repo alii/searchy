@@ -120,6 +120,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
+	mangaupdates: 'https://www.mangaupdates.com/search.html?search={q}',
 
 	// .new
 	figma: 'https://figma.new',
