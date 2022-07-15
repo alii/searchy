@@ -14,11 +14,13 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	gems: 'https://rubygems.org/search?query={q}',
 	hex: 'https://hex.pm/packages?search={q}',
 	nuget: 'https://www.nuget.org/packages?q={q}',
+	crates: 'https://crates.io/search?q={q}',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
 	googledomains: 'https://domains.google.com/registrar/search?searchTerm={q}',
+	godaddy: 'https://se.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={q}',
 
 	// Programming
 	git: 'https://github.com/search?q={q}',
@@ -112,6 +114,10 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	amazonau: 'https://www.amazon.com.au/s?k={q}',
 	amazonjp: 'https://www.amazon.co.jp/s?k={q}',
 	amazonin: 'https://www.amazon.co.in/s?k={q}',
+	amazonse: 'https://www.amazon.se/s?k={q}',
+	banggood: 'https://www.banggood.com/search/{q}.html?from=nav',
+	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not -H4rldev
+	wish: 'https://www.wish.com/search/{q}', // This site sucks but why not. -H4rldev
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
@@ -119,7 +125,11 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
-
+	zoro: 'https://zoro.to/search?keyword={q}',
+	'9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
+	'9anime': 'https://9anime.id/search?keyword={q}&vrf=Ux9h8vwyLd',  // Not entirely sure if these work either -H4rldev
+	'9anime': 'https://9anime.pl/search?keyword={q}&vrf=Ux9h8vwyLd',
+         
 	// .new
 	figma: 'https://figma.new',
 	meet: 'https://meet.new',
@@ -165,6 +175,21 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	del: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	dbotsgg: 'https://discord.bots.gg/search?q={q}',
+
+	//Torrent Trackers (Optional)
+	'1337x': 'https://1337x.to/search/{q}/1/', // Universal for Movies, Shows, Anime, Porn, Software and Games.
+	rarbg: 'http://rarbg.to/torrents.php?search={q}', // Movies, Shows and Porn + Some Software.
+	rutracker: 'https://rutracker.org/forum/login.php?redirect=tracker.php?nm={q}', // Is in russian and requires an account to search.
+        nyaa: 'https://nyaa.si/?f=0&c=0_0&q={q}', // Anime Torrents.
+	psa: 'https://psa.pm/?s={q}', // Movies and Shows re-encoded to x265.
+        h10anime: 'https://hi10anime.com/?s={q}', // Anime Torrents.
+	torrentgalaxy: 'https://torrentgalaxy.mx/', // Filled with popups and ads. Really annoying tracker.
+	rutor: 'http://rutor.info/search/{q}', // Russian Games Tracker.
+	gamestorrents: 'https://www.gamestorrents.fm/?s={q}', // Spanish or Central/South American Games tracker.
+	'gnarly-repacks': 'https://www.gnarly-repacks.site/?s={q}', // Games Site.
+        fitgirl: 'https://fitgirl-repacks.site/?s={q}', // One of the most popular sources for repacks of games. Highly recommkaoskrew: 'ended.
+        'dodi-repacks': 'https://dodi-repacks.site/?s={q}', // A lot of dodi's content is the same as fitgirl's.
+	kaoskrew: 'https://kaoskrew.org/search.php?keywords=yeah&fid%5B0%5D=13' // Torrenting forum for games. Many known crackers post their content there.
 
 	// Twitter utils
 	tweet: 'https://twitter.com/intent/tweet?text={q}',
