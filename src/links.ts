@@ -19,6 +19,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
 	googledomains: 'https://domains.google.com/registrar/search?searchTerm={q}',
+	porkbun: 'https://porkbun.com/checkout/search?q={q}',
 
 	// Programming
 	git: 'https://github.com/search?q={q}',
@@ -119,6 +120,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
+	mangaupdates: 'https://www.mangaupdates.com/search.html?search={q}',
 
 	// .new
 	figma: 'https://figma.new',
