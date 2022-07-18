@@ -127,8 +127,6 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
 	zoro: 'https://zoro.to/search?keyword={q}',
 	'9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
-	'9anime': 'https://9anime.id/search?keyword={q}&vrf=Ux9h8vwyLd',  // Not entirely sure if these work either. -H4rldev
-	'9anime': 'https://9anime.pl/search?keyword={q}&vrf=Ux9h8vwyLd',
          
 	// .new
 	figma: 'https://figma.new',
