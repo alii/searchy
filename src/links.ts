@@ -20,7 +20,8 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
 	googledomains: 'https://domains.google.com/registrar/search?searchTerm={q}',
-	godaddy: 'https://se.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={q}',
+  godaddy: 'https://se.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={q}',
+  porkbun: 'https://porkbun.com/checkout/search?q={q}',
 
 	// Programming
 	git: 'https://github.com/search?q={q}',
@@ -125,9 +126,11 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
+
 	zoro: 'https://zoro.to/search?keyword={q}',
-	'9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
-         
+  mangaupdates: 'https://www.mangaupdates.com/search.html?search={q}',
+ '9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
+
 	// .new
 	figma: 'https://figma.new',
 	meet: 'https://meet.new',
