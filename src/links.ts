@@ -159,7 +159,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	hackernews: 'https://hn.algolia.com/?q={q}',
 	pixiv: 'https://www.pixiv.net/en/tags/{q}',
 	translate: 'https://translate.google.com/?sl=auto&tl=en&text={q}&op=translate',
-
+	wayback: 'https://web.archive.org/web/*/{q}',
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
 	dbleu: 'https://discord-botlist.eu/search?q={q}',
