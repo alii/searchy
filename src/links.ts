@@ -26,6 +26,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	// Programming
 	git: 'https://github.com/search?q={q}',
 	github: 'https://github.com/{q}',
+	gh: 'https://github.com/search?q={q}',
 	stackoverflow: 'https://stackoverflow.com/search?q={q}',
 	codepen: 'https://codepen.io/search/pens?q={q}',
 	discordpy: 'https://discordpy.readthedocs.io/en/latest/search.html?q={q}',
@@ -51,6 +52,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
 	duck: 'https://duckduckgo.com/?q={q}',
+	ddg: 'https://duckduckgo.com/?q={q}',
 	brave: 'https://search.brave.com/search?q={q}',
 	startpage: 'https://www.startpage.com/sp/search?q={q}',
 	ecosia: 'https://www.ecosia.org/search?q={q}',
@@ -73,6 +75,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	imdb: 'https://www.imdb.com/find?q={q}',
 	rotten: 'https://www.rottentomatoes.com/search?search={q}',
 	fandango: 'https://www.fandango.com/search?q={q}',
+	tmdb: 'https://www.themoviedb.org/search?query={q}',
 
 	// Social
 	twitter: 'https://twitter.com/search?q={q}&src=typed_query',
@@ -97,6 +100,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	twitch: 'https://www.twitch.tv/{q}',
 	netflix: 'https://www.netflix.com/search?q={q}',
 	pornhub: 'https://www.pornhub.com/video/search?search={q}',
+	nebula: 'https://nebula.app/search?q={q}',
 
 	// Shopping
 	amazon: 'https://www.amazon.com/s?k={q}',
@@ -116,6 +120,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	amazonjp: 'https://www.amazon.co.jp/s?k={q}',
 	amazonin: 'https://www.amazon.co.in/s?k={q}',
 	amazonse: 'https://www.amazon.se/s?k={q}',
+	thalia: 'https://www.thalia.de/suche?sq={q}',
 	banggood: 'https://www.banggood.com/search/{q}.html?from=nav',
 	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not. -H4rldev
 	wish: 'https://www.wish.com/search/{q}', // This site sucks but why not. -H4rldev
@@ -126,6 +131,10 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	anidb: 'https://anidb.net/search/anime/?adb.search={q}',
 	crunchyroll: 'https://www.crunchyroll.com/search?&q={q}',
 	animixplay: 'https://animixplay.to/?q={q}&sengine=gogo',
+	sakuta: 'https://sakuta.app/search?q={q}',
+	animenewsnetwork: 'https://www.animenewsnetwork.com/search?q={q}',
+	ann: 'https://www.animenewsnetwork.com/search?q={q}',
+	anidb: 'https://anidb.net/anime/?adb.search={q}',
 
 	zoro: 'https://zoro.to/search?keyword={q}',
   	mangaupdates: 'https://www.mangaupdates.com/search.html?search={q}',
@@ -168,6 +177,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	hackernews: 'https://hn.algolia.com/?q={q}',
 	pixiv: 'https://www.pixiv.net/en/tags/{q}',
 	translate: 'https://translate.google.com/?sl=auto&tl=en&text={q}&op=translate',
+	gmail: 'https://mail.google.com/mail/#search/{q}',
 	wayback: 'https://web.archive.org/web/*/{q}',
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
