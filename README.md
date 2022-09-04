@@ -2,7 +2,7 @@
 
 Supercharge your searching with a simple cloudflare worker.
 
-### Guide:
+### Setup Guide:
 
 Add `https://search.alistair.sh/?q=` as a custom search engine to your browser. For Chrome/Chromium and Firefox/Waterfox, you would need to add `%s` on the end of that. Consult your browser's documentation for relevant information.
 
@@ -14,7 +14,21 @@ If you prefer duckduckgo, you can set your URL to the following to have your sea
 https://search.alistair.sh/?q=%s&engine=https:%2f%2fduckduckgo.com%2f%3fq={q}
 ```
 
-#### Visual Guide
+&nbsp;
+
+### Usage Guide:
+
+Using your browser as normal will funnel searches through to google's search engine (or a custom set one as shown in 'Fallback Engines').
+
+To use the powerful part of this project and search through a variety of mainstream sites use the ``![site] [search data]`` structure to search any search data on any of the specific sites supported in this project.
+
+**Example:** ``!yt cats`` will search for cats on youtube :)
+
+To see which sites are supported and what their shortcuts are check out [`/src/links.ts`](/src/links.ts).
+
+&nbsp;
+
+### Visual Setup Guide
 
 <details>
 <summary>
