@@ -20,8 +20,8 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	namelix: 'https://namelix.com/app/?keywords={q}',
 	namecheap: 'https://www.namecheap.com/domains/registration/results/?domain={q}',
 	googledomains: 'https://domains.google.com/registrar/search?searchTerm={q}',
-  	godaddy: 'https://se.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={q}',
- 	porkbun: 'https://porkbun.com/checkout/search?q={q}',
+	godaddy: 'https://se.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={q}',
+	porkbun: 'https://porkbun.com/checkout/search?q={q}',
 
 	// Programming
 	git: 'https://github.com/search?q={q}',
@@ -34,7 +34,6 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	discordjs: 'https://discord.js.org/#/docs/main/stable/search?query={q}',
 	djs: 'https://discord.js.org/#/docs/main/stable/search?query={q}',
 	gitlab: 'https://gitlab.com/search?search={q}',
-	crates: 'https://crates.io/search?q={q}',
 	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
 	lh: 'http://localhost:3000',
 	lhp: 'http://localhost:{q}',
@@ -134,11 +133,10 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	sakuta: 'https://sakuta.app/search?q={q}',
 	animenewsnetwork: 'https://www.animenewsnetwork.com/search?q={q}',
 	ann: 'https://www.animenewsnetwork.com/search?q={q}',
-	anidb: 'https://anidb.net/anime/?adb.search={q}',
 
 	zoro: 'https://zoro.to/search?keyword={q}',
-  	mangaupdates: 'https://www.mangaupdates.com/search.html?search={q}',
- 	'9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
+	mangaupdates: 'https://www.mangaupdates.com/search.html?search={q}',
+	'9anime': 'https://9anime.to/search?keyword={q}&vrf=Ux9h8vwyLd',
 
 	// .new
 	figma: 'https://figma.new',
