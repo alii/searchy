@@ -1,14 +1,9 @@
 name = "search"
-type = "javascript"
-account_id = 'ad270f797e0a3205ac74136dc5b656b1'
-route = ''
-zone_id = ''
-usage_model = ''
+account_id = 'ACCOUNT_ID'
+usage_model = 'bundled'
 compatibility_flags = []
 workers_dev = true
 compatibility_date = "2021-10-29"
 
 [build]
 command = "yarn && yarn build"
-[build.upload]
-format = "service-worker"
