@@ -22,6 +22,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	googledomains: 'https://domains.google.com/registrar/search?searchTerm={q}',
 	godaddy: 'https://se.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={q}',
 	porkbun: 'https://porkbun.com/checkout/search?q={q}',
+	whois: 'https://who.is/whois/{q}',
 
 	// Programming
 	git: 'https://github.com/search?q={q}',
