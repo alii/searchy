@@ -54,7 +54,7 @@ $ yarn global add wrangler
 
 Set `name` to what you want. By default this will be search.`workeraccountname`.workers.dev but you can set a custom domain in the worker dashboard
 
-Set `account_id` to your account ID. You can find this by logging into Cloudflare and copying the value after `https://dash.cloudflare.com/` - for example the link `https://dash.cloudflare.com/ad270f797e0a3205ac74136dc5b656b1`'s account ID would be `ad270f797e0a3205ac74136dc5b656b1`
+Replace `ad270f797e0a3205ac74136dc5b656b1` with your account ID. You can find this by logging into Cloudflare and copying the value after `https://dash.cloudflare.com/` - for example the link `https://dash.cloudflare.com/ad270f797e0a3205ac74136dc5b656b1`'s account ID would be `ad270f797e0a3205ac74136dc5b656b1`
 
 #### Publish the worker
 

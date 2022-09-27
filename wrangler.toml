@@ -1,5 +1,5 @@
 name = "search"
-account_id = 'ACCOUNT_ID'
+account_id = 'ad270f797e0a3205ac74136dc5b656b1'
 usage_model = 'bundled'
 compatibility_flags = []
 workers_dev = true
