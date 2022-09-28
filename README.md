@@ -20,20 +20,58 @@ https://search.alistair.sh/?q=%s&engine=https:%2f%2fduckduckgo.com%2f%3fq={q}
 
 Using your browser as normal will funnel searches through to google's search engine (or a custom set one as shown in 'Fallback Engines').
 
-To use the powerful part of this project and search through a variety of mainstream sites use the ``![site] [search data]`` structure to search any search data on any of the specific sites supported in this project.
+To use the powerful part of this project and search through a variety of mainstream sites use the `![site] [search data]` structure to search any search data on any of the specific sites supported in this project.
 
-**Example:** ``!yt cats`` will search for cats on youtube :)
+**Example:** `!yt cats` will search for cats on youtube :)
 
 To see which sites are supported and what their shortcuts are check out [`/src/links.ts`](/src/links.ts).
 
 &nbsp;
+
+### Installation
+
+#### Clone this repo into a directory of your choosing
+
+```console
+$ git clone https://github.com/alii/search cloudflare-worker-search
+```
+
+### Install the Cloudflare Wrangler CLI
+
+Run
+
+```console
+$ npm install -g wrangler
+```
+
+or install with yarn
+
+```console
+$ yarn global add wrangler
+```
+
+### Edit wrangler.toml to your liking
+
+Set `name` to what you want. By default this will be search.`workeraccountname`.workers.dev but you can set a custom domain in the worker dashboard
+
+Replace `ad270f797e0a3205ac74136dc5b656b1` with your account ID. You can find this by logging into Cloudflare and copying the value after `https://dash.cloudflare.com/` - for example the link `https://dash.cloudflare.com/ad270f797e0a3205ac74136dc5b656b1`'s account ID would be `ad270f797e0a3205ac74136dc5b656b1`
+
+#### Publish the worker
+
+```console
+$ wrangler publish src/index.ts
+```
+
+If it asks you `You are about to publish a Workers Service that was last published via the Cloudflare Dashboard.` Enter `y`
+
+The worker should now be working at the domain it gives you
 
 ### Visual Setup Guide
 
 <details>
 <summary>
 <strong>
-Chrome/Chromium 
+Chrome/Chromium
 </strong>
 </summary>
 <img src="https://user-images.githubusercontent.com/98224660/179482959-622e6694-2564-4b32-9ed2-05dc32a75d76.png"/>
@@ -44,14 +82,18 @@ Chrome/Chromium
 It says:
 
 ```
+
 alii/search (Can be named whatever)
 
 alii/search (Can also be whatever)
 
 https://search.alistair.sh/?q=%s
+
 ```
+
 <img src="https://user-images.githubusercontent.com/98224660/179483106-d5a7bff2-cfb4-4c3e-a753-3778d91faba5.png"/> <br>
 <img src="https://user-images.githubusercontent.com/98224660/179483127-75f96f91-c061-46fe-ad18-e97db473edcc.png"/>
+
 </details>
 
 <details>
@@ -68,3 +110,4 @@ Firefox/Waterfox
 <img src="https://user-images.githubusercontent.com/98224660/179487873-8e7cdc31-c37c-4b14-a156-d310c30ab61d.png"/>
 <img src="https://user-images.githubusercontent.com/98224660/179487872-0beea08b-39e0-42ac-aaeb-621936ee20ad.png"/>
 </details
+```
