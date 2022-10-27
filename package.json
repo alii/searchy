@@ -5,6 +5,7 @@
 	"repository": "https://github.com/alii/search",
 	"author": "Alistair Smith <alistairsmith01@gmail.com>",
 	"license": "MIT",
+	"type": "commonjs",
 	"scripts": {
 		"build": "tsup src/index.ts",
 		"dev": "wrangler dev",
