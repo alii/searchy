@@ -147,6 +147,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	docs: 'https://docs.new',
 	slides: 'https://slides.new',
 	repl: 'https://replit.new',
+	lex: 'https://lex.new',
 
 	// Misc
 	imp: 'https://impb.in/p/{q}',
