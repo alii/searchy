@@ -4,6 +4,7 @@ usage_model = 'bundled'
 compatibility_flags = []
 workers_dev = true
 compatibility_date = "2021-10-29"
+type = "javascript"
 
 [build]
 command = "yarn && yarn build"
