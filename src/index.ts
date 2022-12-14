@@ -1,7 +1,7 @@
 import {SITES} from './links';
 
 function encodeChars(text: string) {
-	return text.replace(/( |\+)/g, encodeURIComponent);
+	return encodeURIComponent(text);
 }
 
 function handleRequest(request: Request) {
