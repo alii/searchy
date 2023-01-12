@@ -124,6 +124,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	banggood: 'https://www.banggood.com/search/{q}.html?from=nav',
 	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not. -H4rldev
 	wish: 'https://www.wish.com/search/{q}', // This site sucks but why not. -H4rldev
+	thalia: 'https://www.thalia.de/suche?sq={q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
