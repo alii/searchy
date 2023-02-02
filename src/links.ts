@@ -58,6 +58,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	ecosia: 'https://www.ecosia.org/search?q={q}',
 	bing: 'https://www.bing.com/search?q={q}',
 	wiby: 'https://wiby.me/?q={q}',
+	qwant: 'https://qwant.com/?q={q}',
 
 	// Music
 	genius: 'https://genius.com/search?q={q}',
@@ -91,6 +92,8 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
 	sub: 'https://reddit.com/r/{q}',
+	snapchat: 'https://snapchat.com/add/{q}',
+	sc: 'https://snapchat.com/add/{q}',
 
 	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
