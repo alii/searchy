@@ -48,6 +48,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	docker: 'https://hub.docker.com/_/{q}',
 	mdn: 'https://developer.mozilla.org/en-US/search?q={q}',
 	daily: 'https://app.daily.dev/search?q={q}',
+	wakatime: 'https://wakatime.com/@{q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -58,6 +59,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	ecosia: 'https://www.ecosia.org/search?q={q}',
 	bing: 'https://www.bing.com/search?q={q}',
 	wiby: 'https://wiby.me/?q={q}',
+	qwant: 'https://qwant.com/?q={q}',
 
 	// Music
 	genius: 'https://genius.com/search?q={q}',
@@ -91,6 +93,8 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	tiktok: 'https://www.tiktok.com/search?q={q}',
 	discord: 'https://discord.gg/{q}',
 	sub: 'https://reddit.com/r/{q}',
+	snapchat: 'https://snapchat.com/add/{q}',
+	sc: 'https://snapchat.com/add/{q}',
 
 	// Video
 	youtube: 'https://www.youtube.com/results?search_query={q}&page={startPage?}&utm_source=opensearch',
@@ -124,7 +128,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	banggood: 'https://www.banggood.com/search/{q}.html?from=nav',
 	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not. -H4rldev
 	wish: 'https://www.wish.com/search/{q}', // This site sucks but why not. -H4rldev
-	thalia: 'https://www.thalia.de/suche?sq={q}',
+	shein: 'https://shein.com/pdsearch/{q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
@@ -180,6 +184,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	translate: 'https://translate.google.com/?sl=auto&tl=en&text={q}&op=translate',
 	gmail: 'https://mail.google.com/mail/#search/{q}',
 	wayback: 'https://web.archive.org/web/*/{q}',
+
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
 	dbleu: 'https://discord-botlist.eu/search?q={q}',
@@ -209,7 +214,6 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	rt: 'https://twitter.com/intent/retweet?tweet_id={q}',
 
 	// Cryptoooo
-
 	gas: 'https://etherscan.io/gastracker',
 	eth: args => {
 		const [type, q] = args.split(' ');
@@ -220,5 +224,42 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	newportal: args => {
 		const formatted = args.startsWith('http') ? args : `https://${args}`;
 		return `https://giggl.to/${formatted}`;
+	},
+	// Inspired by https://github.com/hopinc/cli
+	hop: (args = '') => {
+		const domain = 'hop.io';
+		const [command, arg, ...rest] = args.split(' ');
+	
+		const project = arg ? `?project=${arg}` : '';
+		const formattedRest = rest.join('/') || '';
+	
+		switch(command) {
+			case 'home':
+				return `https://${domain}`;
+			case 'pricing':  case 'price':
+				return `https://${domain}/pricing`;
+			case 'blog':     case 'b':
+				return `https://${domain}/blog/${arg}`;
+			case 'roadmap':  case 'r':
+				return `https://${domain}/roadmap`;
+			case 'help':     case 'h':
+			case 'docs':     case 'd':
+			case 'doc':
+				return `https://docs.${domain}/${arg ? `${arg}/` : ''}${formattedRest}`;
+			case 'payment':  case 'p':
+			case 'cards':
+				return `https://console.${domain}/settings/cards`
+			case 'settings': case 's':
+				if (arg) return `https://console.${domain}/project/settings/${formattedRest}${project}`;
+				return `https://console.${domain}/settings`;
+			case 'auth':     case 'a':
+				return `https://console.${domain}/auth`;
+			case 'channels': case 'c':
+				return `https://console.${domain}/channels${project}`;
+			case 'ignite':   case 'i':
+				return `https://console.${domain}/ignite${project}`;
+			default:
+				return `https://console.${domain}`;
+		}
 	},
 };
