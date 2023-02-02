@@ -225,4 +225,41 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 		const formatted = args.startsWith('http') ? args : `https://${args}`;
 		return `https://giggl.to/${formatted}`;
 	},
+	// Inspired by https://github.com/hopinc/cli
+	hop: (args = '') => {
+		const domain = 'hop.io';
+		const [command, arg, ...rest] = args.split(' ');
+	
+		const project = arg ? `?project=${arg}` : '';
+		const formattedRest = rest.join('/') || '';
+	
+		switch(command) {
+			case 'home':
+				return `https://${domain}`;
+			case 'pricing':  case 'price':
+				return `https://${domain}/pricing`;
+			case 'blog':     case 'b':
+				return `https://${domain}/blog/${arg}`;
+			case 'roadmap':  case 'r':
+				return `https://${domain}/roadmap`;
+			case 'help':     case 'h':
+			case 'docs':     case 'd':
+			case 'doc':
+				return `https://docs.${domain}/${arg ? `${arg}/` : ''}${formattedRest}`;
+			case 'payment':  case 'p':
+			case 'cards':
+				return `https://console.${domain}/settings/cards`
+			case 'settings': case 's':
+				if (arg) return `https://console.${domain}/project/settings/${formattedRest}${project}`;
+				return `https://console.${domain}/settings`;
+			case 'auth':     case 'a':
+				return `https://console.${domain}/auth`;
+			case 'channels': case 'c':
+				return `https://console.${domain}/channels${project}`;
+			case 'ignite':   case 'i':
+				return `https://console.${domain}/ignite${project}`;
+			default:
+				return `https://console.${domain}`;
+		}
+	},
 };
