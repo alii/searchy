@@ -48,6 +48,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	docker: 'https://hub.docker.com/_/{q}',
 	mdn: 'https://developer.mozilla.org/en-US/search?q={q}',
 	daily: 'https://app.daily.dev/search?q={q}',
+	wakatime: 'https://wakatime.com/@{q}',
 
 	// Search Engines
 	google: 'https://google.com/search?q={q}',
@@ -127,6 +128,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	banggood: 'https://www.banggood.com/search/{q}.html?from=nav',
 	aliexpress: 'https://www.aliexpress.com/wholesale?SearchText={q}', // Not entirely sure if this one works or not. -H4rldev
 	wish: 'https://www.wish.com/search/{q}', // This site sucks but why not. -H4rldev
+	shein: 'https://shein.com/pdsearch/{q}',
 
 	// Anime
 	anilist: 'https://anilist.co/search/anime?search={q}',
@@ -182,6 +184,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	translate: 'https://translate.google.com/?sl=auto&tl=en&text={q}&op=translate',
 	gmail: 'https://mail.google.com/mail/#search/{q}',
 	wayback: 'https://web.archive.org/web/*/{q}',
+
 	// Discord Bot Lists
 	topgg: 'https://top.gg/search?q={q}',
 	dbleu: 'https://discord-botlist.eu/search?q={q}',
@@ -211,7 +214,6 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	rt: 'https://twitter.com/intent/retweet?tweet_id={q}',
 
 	// Cryptoooo
-
 	gas: 'https://etherscan.io/gastracker',
 	eth: args => {
 		const [type, q] = args.split(' ');
