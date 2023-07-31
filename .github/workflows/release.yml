@@ -1,0 +1,99 @@
+name: Release Extension
+
+on:
+  push:
+    tags:
+      - v*
+
+# add permission to create releases
+permissions:
+  contents: write
+
+jobs:
+  draft_release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'alii'
+    outputs:
+      tag_name: ${{ steps.tag.outputs.tag_name }}
+      zipfile: ${{ steps.zipfile.outputs.zipfile }}
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+
+      - name: Get tag data
+        id: tag
+        run: |
+          echo "tag_name=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+          if [[ ${{ github.event.ref }} =~ ^refs/tags/v[0-9]+\.[0-9]+\.[0-9]+-[0-9]+$ ]]; then
+            echo "pre_release=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create full zipfile name
+        id: zipfile
+        run: echo "zipfile=searchy-${{ steps.tag.outputs.tag_name }}.zip" >> $GITHUB_OUTPUT
+
+      - name: Create new release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: ${{ steps.tag.outputs.pre_release == 'true' }}
+          title: ${{ steps.tag.outputs.tag_name }}
+          draft: true
+
+  publish_release:
+    name: Publish Release
+    needs: ['draft_release', 'build']
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'alii'
+    continue-on-error: true
+
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+
+      - name: Create Checksums
+        run: for file in searchy-*/searchy-*; do openssl dgst -sha256 -r "$file" | awk '{print $1}' > "${file}.sha256"; done
+
+      - name: Update Release
+        run: gh release edit ${{ needs.draft_release.outputs.tag_name }} --draft=false --repo=${{ github.repository }}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add Artifacts to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: searchy-*/searchy-*
+          tag_name: ${{ needs.draft_release.outputs.tag_name }}
+
+  build:
+    name: Build
+    needs: ['draft_release']
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'alii'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v3
+      - name: Add problem matchers
+        run: |
+          echo "::add-matcher::.github/matchers/eslint.json"
+          echo "::add-matcher::.github/matchers/tsc.json"
+
+      - name: Install dependencies
+        uses: ./.github/actions/yarn
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Build
+        run: yarn build
+
+      - name: Zip
+        working-directory: apps/extension/release
+        run: zip -r ../../../${{ needs.draft_release.outputs.zipfile }} .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ needs.draft_release.outputs.zipfile }}
+          path: ${{ needs.draft_release.outputs.zipfile }}

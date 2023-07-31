@@ -1,0 +1,7 @@
+{
+	"extends": "../../.eslintrc.json",
+	"rules": {
+		"n/prefer-global/url": 0,
+		"n/prefer-global/url-search-params": 0
+	}
+}

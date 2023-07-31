@@ -1,0 +1,46 @@
+{
+	"name": "@searchy/links",
+	"version": "1.0.0",
+	"description": "a constant of all templatable links",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.mjs",
+		"require": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"contributors": [
+		"Alistair Smith <alistairsmith01@gmail.com>",
+		"Carter Himmel <me@fyko.net>"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alii/searchy.git",
+		"directory": "packages/links"
+	},
+	"bugs": {
+		"url": "https://github.com/alii/searchy/issues"
+	},
+	"license": "MIT",
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"lint": "prettier --check . && eslint src --ext mjs,js,ts,tsx --format=pretty",
+		"format": "prettier --write . && eslint src --ext mjs,js,ts,tsx --fix --format=pretty"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20230724.0",
+		"eslint": "^8.46.0",
+		"eslint-config-neon": "^0.1.47",
+		"eslint-formatter-pretty": "^5.0.0",
+		"prettier": "^3.0.0",
+		"tsup": "^7.1.0",
+		"typescript": "^5.1.6",
+		"wrangler": "^3.4.0"
+	},
+	"packageManager": "yarn@4.0.0-rc.48"
+}

@@ -3,5 +3,6 @@ dist
 .idea
 .vscode
 .DS_store
+.turbo
 .yarn/*
 !.yarn/releases

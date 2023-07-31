@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "es2021",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"moduleResolution": "node",
+		"types": ["chrome"],
+		"baseUrl": ".",
+		"outDir": "dist"
+	},
+	"include": ["src"]
+}
