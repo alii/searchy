@@ -18,9 +18,6 @@
 			"outputMode": "errors-only"
 		},
 		"lint": {
-			"dependsOn": [
-				"^build"
-			],
 			"inputs": [
 				"**/.eslintignore",
 				"**/.eslintrc.json",
@@ -35,15 +32,11 @@
 				"scripts/**.mjs",
 				".prettierrc.js",
 				".prettierrc.cjs",
-				"next.config.js",
 				"vite.config.ts"
 			],
 			"outputMode": "errors-only"
 		},
 		"format": {
-			"dependsOn": [
-				"^build"
-			],
 			"inputs": [
 				"**/.eslintignore",
 				"**/.eslintrc.json",
@@ -58,7 +51,6 @@
 				"scripts/**.mjs",
 				".prettierrc.js",
 				".prettierrc.cjs",
-				"next.config.js",
 				"vite.config.ts"
 			],
 			"outputMode": "errors-only"
