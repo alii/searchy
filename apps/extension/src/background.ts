@@ -35,7 +35,7 @@ chrome.omnibox.onInputChanged.addListener((text, suggest) => {
 				console.log(url);
 
 				return {content: url, description: `${result.item}: ${url}`};
-			}),
+			})
 		);
 	}
 

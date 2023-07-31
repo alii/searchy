@@ -10,14 +10,14 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"build": "wrangler deploy --dry-run --outdir=dist",
-		"lint": "prettier --check . && eslint src --ext mjs,js,ts,tsx --format=pretty",
-		"format": "prettier --write . && eslint src --ext mjs,js,ts,tsx --fix --format=pretty"
+		"lint": "prettier --check . && eslint src --ext .mjs,.js,.ts --format=pretty",
+		"format": "prettier --write . && eslint src --ext .mjs,.js,.ts --fix --format=pretty"
 	},
 	"devDependencies": {
 		"eslint": "^8.46.0",
 		"eslint-config-neon": "^0.1.47",
 		"eslint-formatter-pretty": "^5.0.0",
-		"prettier": "^3.0.0",
+		"prettier": "^2.8.8",
 		"typescript": "^5.1.6",
 		"wrangler": "^3.4.0"
 	},

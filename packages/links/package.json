@@ -29,15 +29,15 @@
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
-		"lint": "prettier --check . && eslint src --ext mjs,js,ts,tsx --format=pretty",
-		"format": "prettier --write . && eslint src --ext mjs,js,ts,tsx --fix --format=pretty"
+		"lint": "prettier --check . && eslint src --ext .mjs,.js,.ts --format=pretty",
+		"format": "prettier --write . && eslint src --ext .mjs,.js,.ts --format=pretty"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230724.0",
 		"eslint": "^8.46.0",
 		"eslint-config-neon": "^0.1.47",
 		"eslint-formatter-pretty": "^5.0.0",
-		"prettier": "^3.0.0",
+		"prettier": "^2.8.8",
 		"tsup": "^7.1.0",
 		"typescript": "^5.1.6",
 		"wrangler": "^3.4.0"
