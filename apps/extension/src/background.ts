@@ -1,6 +1,8 @@
 import {SITES, template} from '@searchy/links';
 import Fuse from 'fuse.js';
 
+const repo = 'alii/searchy';
+
 const fuse = new Fuse(Object.keys(SITES), {
 	shouldSort: true,
 	threshold: 0.4,
@@ -68,3 +70,14 @@ async function navigate(url: string) {
 
 	return chrome.tabs.create({url});
 }
+
+chrome.runtime.onInstalled.addListener(details => {
+	const cases: Record<chrome.runtime.OnInstalledReason, string | undefined> = {
+		[chrome.runtime.OnInstalledReason.INSTALL]: `https://github.com/${repo}/tree/master/apps/extension#readme`,
+		[chrome.runtime.OnInstalledReason.UPDATE]: `https://github.com/${repo}/releases/tags/latest`,
+		[chrome.runtime.OnInstalledReason.CHROME_UPDATE]: undefined,
+		[chrome.runtime.OnInstalledReason.SHARED_MODULE_UPDATE]: undefined,
+	};
+	const url = cases[details.reason];
+	if (url) void navigate(url);
+});
