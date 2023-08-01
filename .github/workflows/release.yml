@@ -56,7 +56,7 @@ jobs:
         run: for file in searchy-*/searchy-*; do openssl dgst -sha256 -r "$file" | awk '{print $1}' > "${file}.sha256"; done
 
       - name: Update Release
-        run: gh release edit ${{ needs.draft_release.outputs.tag_name }} --draft=false --repo=${{ github.repository }}}
+        run: gh release edit ${{ needs.draft_release.outputs.tag_name }} --draft=false --repo=${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
