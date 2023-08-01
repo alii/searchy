@@ -1,4 +1,18 @@
-import {etherscanTypeMap} from './util';
+import {etherscanTypeMap} from './util.js';
+
+/**
+ * @param link - The link to template
+ * @param q - The query value to insert
+ * @returns string - The templated link
+ * @example
+ * ```js
+ * template('https://google.com/search?q={q}', 'hello world');
+ * // => 'https://google.com/search?q=hello%20world'
+ * ```
+ */
+export function template(link: string, q: string) {
+	return link.replace('{q}', encodeURIComponent(q));
+}
 
 export const SITES: Record<string, string | ((query: string) => string) | undefined> = {
 	// Default
@@ -35,7 +49,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	discordjs: 'https://discord.js.org/#/docs/main/stable/search?query={q}',
 	djs: 'https://discord.js.org/#/docs/main/stable/search?query={q}',
 	gitlab: 'https://gitlab.com/search?search={q}',
-	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replace(/\./g, '/')}.html`,
+	javadoc: args => `https://docs.oracle.com/javase/8/docs/api/${args.replaceAll('.', '/')}.html`,
 	lh: 'http://localhost:3000',
 	lhp: 'http://localhost:{q}',
 	rust: 'https://doc.rust-lang.org/book/?search={q}',
@@ -71,7 +85,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	applemusic: 'https://music.apple.com/search?term={q}',
 	ytmusic: 'https://music.youtube.com/search?q={q}',
 	musixmatch: 'https://www.musixmatch.com/search/{q}',
-	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', //till donda drops (if it ever does)
+	kanye: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x', // till donda drops (if it ever does)
 
 	// Movies
 	imdb: 'https://www.imdb.com/find?q={q}',
@@ -193,7 +207,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	discordextremelist: 'https://discordextremelist.xyz/en-US/search/?q={q}',
 	dbotsgg: 'https://discord.bots.gg/search?q={q}',
 
-	//Torrent Trackers (Optional)
+	// Torrent Trackers (Optional)
 	'1337x': 'https://1337x.to/search/{q}/1/', // Universal for Movies, Shows, Anime, Porn, Software and Games. -H4rldev
 	rarbg: 'http://rarbg.to/torrents.php?search={q}', // Movies, Shows and Porn + Some Software. -H4rldev
 	rutracker: 'https://rutracker.org/forum/login.php?redirect=tracker.php?nm={q}', // Is in russian and requires an account to search. -H4rldev
@@ -216,8 +230,8 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	// Cryptoooo
 	gas: 'https://etherscan.io/gastracker',
 	eth: args => {
-		const [type, q] = args.split(' ');
-		return `https://etherscan.io/${type in etherscanTypeMap ? etherscanTypeMap[type as keyof typeof etherscanTypeMap] : type}/${q}`;
+		const [type, query] = args.split(' ');
+		return `https://etherscan.io/${type in etherscanTypeMap ? etherscanTypeMap[type as keyof typeof etherscanTypeMap] : type}/${query}`;
 	},
 
 	// Commands (something that has an action rather than a search)
@@ -229,34 +243,44 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	hop: (args = '') => {
 		const domain = 'hop.io';
 		const [command, arg, ...rest] = args.split(' ');
-	
+
 		const project = arg ? `?project=${arg}` : '';
 		const formattedRest = rest.join('/') || '';
-	
-		switch(command) {
+
+		switch (command) {
 			case 'home':
 				return `https://${domain}`;
-			case 'pricing':  case 'price':
+			case 'pricing':
+			case 'price':
 				return `https://${domain}/pricing`;
-			case 'blog':     case 'b':
+			case 'blog':
+			case 'b':
 				return `https://${domain}/blog/${arg}`;
-			case 'roadmap':  case 'r':
+			case 'roadmap':
+			case 'r':
 				return `https://${domain}/roadmap`;
-			case 'help':     case 'h':
-			case 'docs':     case 'd':
+			case 'help':
+			case 'h':
+			case 'docs':
+			case 'd':
 			case 'doc':
 				return `https://docs.${domain}/${arg ? `${arg}/` : ''}${formattedRest}`;
-			case 'payment':  case 'p':
+			case 'payment':
+			case 'p':
 			case 'cards':
-				return `https://console.${domain}/settings/cards`
-			case 'settings': case 's':
+				return `https://console.${domain}/settings/cards`;
+			case 'settings':
+			case 's':
 				if (arg) return `https://console.${domain}/project/settings/${formattedRest}${project}`;
 				return `https://console.${domain}/settings`;
-			case 'auth':     case 'a':
+			case 'auth':
+			case 'a':
 				return `https://console.${domain}/auth`;
-			case 'channels': case 'c':
+			case 'channels':
+			case 'c':
 				return `https://console.${domain}/channels${project}`;
-			case 'ignite':   case 'i':
+			case 'ignite':
+			case 'i':
 				return `https://console.${domain}/ignite${project}`;
 			default:
 				return `https://console.${domain}`;

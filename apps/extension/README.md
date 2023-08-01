@@ -2,7 +2,7 @@
 	<br>
 	<p>
 		<a href="https://github.com/alii/searchy"><img src="./.github/assets/header.svg" width="500" alt="searchy logo" /></a>
-		<!-- <img src=".github/assets/demo.gif" alt="demo video"> -->
+		<img src=".github/assets/demo.gif" alt="demo video">
 	</p>
 	<br>
 	<!-- <a href="https://discord.com/invite/dUrkbpw"><img alt="Discord Server" src="https://img.shields.io/discord/581633886828625930?color=5865F2&logo=discord&logoColor=white"></a> -->
@@ -14,28 +14,6 @@
 
 ## About
 
-Searchy is a Chrome extension for powerful, command-based searching.
-
-## Apps
-
-- `@searchy/extension` ([source/docs](/apps/extension/)) - The Chrome extension
-- `@searchy/worker` ([source/docs](/apps/worker/)) - The Cloudflare worker that serves as a search engine
-
-## Packages
-
-- `@searchy/links` ([source/docs](/packages/links/)) - A constant of all templatable links
+This is the Chrome extension. Instead of sending a request to the Worker, this extension registers an omnibox with Chrome and handles the commands itself.
 
 ## Privacy Policy
-
-searchy does not collect any data.
-
-<!-- powerful command-based searching
-Searchy is a Chrome extension to deliver powerful command-based searching.
-
-From:
-- `github.com/octokit/rest.js` to `/ github octokit/rest.js`
-- `npmjs.com/react` to `/ npm react`
-- opening imdb.com, searching Endgame -> `/ imdb endgame`
-
-Additionally, it's open source!
-https://github.com/carterhimmel/searchy -->

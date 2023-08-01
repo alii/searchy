@@ -1,0 +1,66 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": [
+		"yarn.lock",
+		"**/tsconfig.json"
+	],
+	"pipeline": {
+		"build": {
+			"dependsOn": [
+				"^build"
+			],
+			"inputs": [
+				"src/**/*.ts"
+			],
+			"outputs": [
+				"dist/**"
+			],
+			"outputMode": "errors-only"
+		},
+		"lint": {
+			"inputs": [
+				"**/.eslintignore",
+				"**/.eslintrc.json",
+				"**/.prettierignore",
+				"**/.prettierrc.json",
+				"**/tsconfig.eslint.json",
+				"src/**/*.tsx",
+				"src/**/*.ts",
+				"src/**/*.css",
+				"src/**/*.mdx",
+				"scripts/**.js",
+				"scripts/**.mjs",
+				".prettierrc.js",
+				".prettierrc.cjs",
+				"vite.config.ts"
+			],
+			"outputMode": "errors-only"
+		},
+		"format": {
+			"inputs": [
+				"**/.eslintignore",
+				"**/.eslintrc.json",
+				"**/.prettierignore",
+				"**/.prettierrc.json",
+				"**/tsconfig.eslint.json",
+				"src/**/*.tsx",
+				"src/**/*.ts",
+				"src/**/*.css",
+				"src/**/*.mdx",
+				"scripts/**.js",
+				"scripts/**.mjs",
+				".prettierrc.js",
+				".prettierrc.cjs",
+				"vite.config.ts"
+			],
+			"outputMode": "errors-only"
+		},
+		"dev": {
+			"dependsOn": [
+				"^build"
+			],
+			"cache": false,
+			"persistent": true
+		}
+	}
+}

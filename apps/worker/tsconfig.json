@@ -1,0 +1,18 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"module": "nodenext",
+		"target": "esnext",
+		"lib": ["esnext", "webworker"],
+		"alwaysStrict": true,
+		"strict": true,
+		"preserveConstEnums": true,
+		"moduleResolution": "nodenext",
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"types": ["@cloudflare/workers-types"],
+		"skipLibCheck": true,
+		"rootDir": "src"
+	},
+	"include": ["src"]
+}

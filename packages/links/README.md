@@ -14,20 +14,7 @@
 
 ## About
 
-Searchy is a Chrome extension for powerful, command-based searching.
-
-## Apps
-
-- `@searchy/extension` ([source/docs](/apps/extension/)) - The Chrome extension
-- `@searchy/worker` ([source/docs](/apps/worker/)) - The Cloudflare worker that serves as a search engine
-
-## Packages
-
-- `@searchy/links` ([source/docs](/packages/links/)) - A constant of all templatable links
-
-## Privacy Policy
-
-searchy does not collect any data.
+`@searchy/links` is a constant of all templatable links. It's used by both the extension and the worker.
 
 <!-- powerful command-based searching
 Searchy is a Chrome extension to deliver powerful command-based searching.

@@ -1,23 +1,42 @@
 {
-	"name": "search",
-	"version": "1.0.0",
-	"main": "dist/index.js",
+	"name": "searchy",
+	"version": "0.0.0",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
 	"repository": "https://github.com/alii/search",
-	"author": "Alistair Smith <alistairsmith01@gmail.com>",
+	"contributors": [
+		"Alistair Smith <alistairsmith01@gmail.com>",
+		"Carter Himmel <me@fyko.net>"
+	],
 	"license": "MIT",
 	"type": "commonjs",
 	"scripts": {
-		"build": "tsup src/index.ts",
-		"dev": "wrangler dev",
-		"lint": "yarn prettier --write .",
+		"build": "turbo run build --cache-dir=.turbo",
+		"build:affected": "turbo run build --filter='...[origin/main]' --cache-dir=.turbo",
+		"build:services": "turbo run build:local --filter='...{services/*}' --cache-dir=.turbo",
+		"build:services:affected": "turbo run build:local --filter='...{services/*}[origin/main]' --cache-dir=.turbo",
+		"lint": "turbo run lint --parallel",
+		"lint:affected": "turbo run lint --filter='...[origin/main]' --parallel",
+		"format": "turbo run format --parallel",
+		"format:affected": "turbo run format --filter='...[origin/main]' --parallel",
 		"act": "act pull_request",
 		"act:m1": "act --container-architecture linux/amd64 pull_request"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^3.0.0",
-		"@cloudflare/wrangler": "^1.19.4",
-		"prettier": "2.4.1",
-		"tsup": "^5.5.0",
-		"typescript": "^4.4.4"
+		"eslint": "^8.46.0",
+		"eslint-config-neon": "^0.1.47",
+		"eslint-formatter-pretty": "^5.0.0",
+		"prettier": "^2.8.8",
+		"tsup": "^7.1.0",
+		"turbo": "^1.10.12",
+		"typescript": "^5.1.6",
+		"vite": "^4.4.7"
+	},
+	"packageManager": "yarn@3.6.1",
+	"volta": {
+		"node": "18.17.0",
+		"yarn": "4.0.0-rc.48"
 	}
 }

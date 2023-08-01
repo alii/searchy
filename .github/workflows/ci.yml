@@ -1,0 +1,46 @@
+name: Tests
+on:
+  push:
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Volta
+        uses: volta-cli/action@v3
+
+      - name: Cache turbo
+        uses: actions/cache@v3
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
+      - name: Install dependencies
+        uses: ./.github/actions/yarn
+
+      - name: Build dependencies (PR)
+        if: ${{ github.event_name != 'push' }}
+        run: yarn build --filter="...[origin/${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}]"
+
+      - name: Build dependencies (Push)
+        if: ${{ github.event_name == 'push' }}
+        run: yarn build --filter="...[HEAD^1]"
+
+      - name: ESLint (PR)
+        if: ${{ github.event_name != 'push' }}
+        run: yarn lint --filter="...[origin/${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}]" -- --format=compact
+
+      - name: ESLint (Push)
+        if: ${{ github.event_name == 'push' }}
+        run: yarn lint --filter="...[HEAD^1]" -- --format=compact

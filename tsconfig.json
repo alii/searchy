@@ -1,19 +1,14 @@
 {
 	"compilerOptions": {
-		"outDir": "dist",
-		"module": "commonjs",
+		"module": "esnext",
 		"target": "esnext",
-		"lib": ["esnext", "webworker"],
+		"lib": ["esnext"],
 		"alwaysStrict": true,
 		"strict": true,
 		"preserveConstEnums": true,
 		"moduleResolution": "node",
 		"sourceMap": true,
 		"esModuleInterop": true,
-		"types": ["@cloudflare/workers-types"],
-		"skipLibCheck": true,
-		"rootDir": "src"
-	},
-	"include": ["src"],
-	"exclude": ["node_modules"]
+		"skipLibCheck": true
+	}
 }

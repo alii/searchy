@@ -1,0 +1,40 @@
+{
+	"name": "@searchy/extension",
+	"version": "0.2.0",
+	"contributors": [
+		"Alistair Smith <alistairsmith01@gmail.com>",
+		"Carter Himmel <me@fyko.net>"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alii/searchy.git",
+		"directory": "apps/extension"
+	},
+	"bugs": {
+		"url": "https://github.com/alii/searchy/issues"
+	},
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --mode development",
+		"build": "vite build --mode production",
+		"lint": "prettier --check . && eslint src --ext .mjs,.js,.ts --format=pretty",
+		"format": "prettier --write . && eslint src --ext .mjs,.js,.ts --fix --format=pretty"
+	},
+	"dependencies": {
+		"@searchy/links": "workspace:^",
+		"fuse.js": "^6.6.2"
+	},
+	"devDependencies": {
+		"@crxjs/vite-plugin": "^1.0.14",
+		"@types/chrome": "^0.0.242",
+		"eslint": "^8.46.0",
+		"eslint-config-neon": "^0.1.47",
+		"eslint-formatter-pretty": "^5.0.0",
+		"prettier": "^2.8.8",
+		"typescript": "^5.1.6",
+		"vite": "^4.4.7",
+		"wrangler": "^3.4.0"
+	},
+	"packageManager": "yarn@4.0.0-rc.48"
+}

@@ -1,8 +1,4 @@
-import {SITES} from './links';
-
-function encodeChars(text: string) {
-	return encodeURIComponent(text);
-}
+import {SITES, template} from '@searchy/links';
 
 function handleRequest(request: Request) {
 	const url = new URL(request.url);
@@ -19,15 +15,13 @@ function handleRequest(request: Request) {
 			const joined = rest.join(' ');
 			const parsed = typeof site === 'function' ? site(joined) : site;
 
-			return Response.redirect(parsed.replace('{q}', encodeChars(joined)), 301);
+			return Response.redirect(template(parsed, joined), 301);
 		}
 
 		// The else case here is that they entered a website that doesn't exist
 	}
 
-	return Response.redirect(engine.replace('{q}', encodeChars(query)), 301);
+	return Response.redirect(template(engine, query), 301);
 }
 
-addEventListener('fetch', event => {
-	return event.respondWith(handleRequest(event.request));
-});
+export default {fetch: (request: Request) => handleRequest(request)};

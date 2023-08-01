@@ -1,0 +1,6 @@
+name = "search"
+account_id = 'ad270f797e0a3205ac74136dc5b656b1'
+usage_model = 'bundled'
+main = 'src/index.ts'
+workers_dev = true
+compatibility_date = "2023-05-18"
