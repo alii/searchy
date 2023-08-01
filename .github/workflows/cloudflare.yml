@@ -1,9 +1,10 @@
-name: Deploy
+name: Deploy Worker
 
 on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   deploy:
@@ -11,7 +12,9 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v2
+
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_TOKEN }}
+          workingDirectory: ./apps/worker
