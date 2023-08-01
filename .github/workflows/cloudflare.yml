@@ -13,6 +13,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Volta
+        uses: volta-cli/action@v3
+
+      - name: Cache turbo
+        uses: actions/cache@v3
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
+      - name: Install dependencies
+        uses: ./.github/actions/yarn
+
+      - name: Build Worker
+        run: yarn turbo build --scope=@searchy/worker
+
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
         with:
