@@ -74,7 +74,7 @@ async function navigate(url: string) {
 chrome.runtime.onInstalled.addListener(details => {
 	const cases: Record<chrome.runtime.OnInstalledReason, string | undefined> = {
 		[chrome.runtime.OnInstalledReason.INSTALL]: `https://github.com/${repo}/tree/master/apps/extension#readme`,
-		[chrome.runtime.OnInstalledReason.UPDATE]: `https://github.com/${repo}/releases/tags/latest`,
+		[chrome.runtime.OnInstalledReason.UPDATE]: `https://github.com/${repo}/releases/latest`,
 		[chrome.runtime.OnInstalledReason.CHROME_UPDATE]: undefined,
 		[chrome.runtime.OnInstalledReason.SHARED_MODULE_UPDATE]: undefined,
 	};
