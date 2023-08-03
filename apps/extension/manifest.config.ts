@@ -22,7 +22,6 @@ export default defineManifest({
 	background: {
 		service_worker: 'src/background.ts',
 	},
-	permissions: ['tabs'],
 	omnibox: {
 		keyword: '!',
 	},
