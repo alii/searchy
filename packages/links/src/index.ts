@@ -29,6 +29,7 @@ export const SITES: Record<string, string | ((query: string) => string) | undefi
 	hex: 'https://hex.pm/packages?search={q}',
 	nuget: 'https://www.nuget.org/packages?q={q}',
 	crates: 'https://crates.io/search?q={q}',
+	crate: 'https://crates.io/crates/{q}',
 
 	// Domains
 	namelix: 'https://namelix.com/app/?keywords={q}',
